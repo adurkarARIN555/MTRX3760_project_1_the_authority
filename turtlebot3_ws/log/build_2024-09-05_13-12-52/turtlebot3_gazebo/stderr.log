@@ -1,0 +1,6 @@
+[01m[K/home/eashan/turtlebot3_ws/src/turtlebot3_simulations/turtlebot3_gazebo/src/turtlebot3_drive.cpp:46:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+   46 | [01;35m[K/[m[K/     "scan", \
+      | [01;35m[K^[m[K
+[01m[K/home/eashan/turtlebot3_ws/src/turtlebot3_simulations/turtlebot3_gazebo/src/turtlebot3_drive.cpp:49:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+   49 | [01;35m[K/[m[K/       &Turtlebot3Drive::scan_callback, \
+      | [01;35m[K^[m[K

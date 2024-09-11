@@ -1,0 +1,135 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <scene>
+      <shadows>false</shadows>
+    </scene>
+
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>0.319654 -0.235002 9.29441 0 1.5138 0.009599</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+
+    <physics type="ode">
+      <real_time_update_rate>1000.0</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+    </physics>
+
+    <!-- South Wall (Scaled Down) -->
+    <model name="wall_south">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>7.5 1 1.25</size> <!-- Scaled down by half -->
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>7.5 1 1.25</size> <!-- Scaled down by half -->
+            </box>
+          </geometry>
+        </visual>
+        <pose>0 -3.75 0.625 0 0 0</pose> <!-- Adjusted pose -->
+      </link>
+    </model>
+
+    <!-- West Wall (Scaled Down) -->
+    <model name="wall_west">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1 4 1.25</size> <!-- Scaled down by half -->
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 4 1.25</size> <!-- Scaled down by half -->
+            </box>
+          </geometry>
+        </visual>
+        <pose>-3.75 -2.25 0.625 0 0 0</pose> <!-- Adjusted pose -->
+      </link>
+    </model>
+
+    <!-- East Wall (Scaled Down) -->
+    <model name="wall_east">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1 4 1.25</size> <!-- Scaled down by half -->
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 4 1.25</size> <!-- Scaled down by half -->
+            </box>
+          </geometry>
+        </visual>
+        <pose>3.75 -3.75 0.625 0 0 0</pose> <!-- Adjusted pose -->
+      </link>
+    </model>
+
+    <!-- Central Wall (Scaled Down) -->
+    <model name="wall_center">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1 1.25 0.5</size> <!-- Scaled down by half -->
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 1.25 0.5</size> <!-- Scaled down by half -->
+            </box>
+          </geometry>
+        </visual>
+        <pose>1.8 -1 1.2 0 0 0</pose> <!-- Adjusted pose -->
+      </link>
+    </model>
+
+    <!-- TurtleBot Starting Position (Unchanged) -->
+    <model name="turtlebot3_burger">
+      <static>false</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>model://turtlebot3_burger</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose>3.5 -3.5 0.1 0 0 0</pose> <!-- Starts within the scaled maze -->
+    </model>
+
+  </world>
+</sdf>

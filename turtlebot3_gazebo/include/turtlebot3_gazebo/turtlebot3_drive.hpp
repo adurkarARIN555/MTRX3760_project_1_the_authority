@@ -57,6 +57,7 @@ private:
   double robot_pose_;
   double prev_robot_pose_;
   double scan_data_[3];
+  double robot_x_; // Store the robot's x-coordinate
 
   // ROS timer
   rclcpp::TimerBase::SharedPtr update_timer_;

@@ -27,6 +27,7 @@ find_package(nav_msgs REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(tf2 REQUIRED)
+find_package(turtlebot3_msgs REQUIRED)
 
 ################################################################################
 # Build
@@ -38,6 +39,7 @@ link_directories(
 include_directories(
   include
   ${GAZEBO_INCLUDE_DIRS}
+  ${turtlebot3_msgs_INCLUDE_DIRS}
 )
 
 set(dependencies
@@ -46,26 +48,32 @@ set(dependencies
   "rclcpp"
   "sensor_msgs"
   "tf2"
+  "turtlebot3_msgs" 
 )
 
-set(EXEC_NAME "turtlebot3_drive")
+# Define the libraries
+set(LIB_LASER_SCAN_PROCESSOR "laser_scan_processor")
+add_library(${LIB_LASER_SCAN_PROCESSOR} src/laser_scan_processor.cpp)
+ament_target_dependencies(${LIB_LASER_SCAN_PROCESSOR} ${dependencies})
 
-add_executable(${EXEC_NAME} src/turtlebot3_drive.cpp)
-ament_target_dependencies(${EXEC_NAME} ${dependencies})
+set(LIB_ODOM_PROCESSOR "odom_processor")
+add_library(${LIB_ODOM_PROCESSOR} src/odom_processor.cpp)
+ament_target_dependencies(${LIB_ODOM_PROCESSOR} ${dependencies})
 
-add_library(obstacle1 SHARED models/turtlebot3_dqn_world/obstacle_plugin/obstacle1.cc)
-target_link_libraries(obstacle1 ${GAZEBO_LIBRARIES})
+set(LIB_OBSTACLE_AVOIDANCE "obstacle_avoidance")
+add_library(${LIB_OBSTACLE_AVOIDANCE} src/obstacle_avoidance.cpp)
+ament_target_dependencies(${LIB_OBSTACLE_AVOIDANCE} ${dependencies})
 
-add_library(obstacle2 SHARED models/turtlebot3_dqn_world/obstacle_plugin/obstacle2.cc)
-target_link_libraries(obstacle2 ${GAZEBO_LIBRARIES})
+# Define the main executable
+set(EXEC_MAIN "main")
+add_executable(${EXEC_MAIN} src/main.cpp)
+ament_target_dependencies(${EXEC_MAIN} ${dependencies})
 
-add_library(obstacles SHARED models/turtlebot3_dqn_world/obstacle_plugin/obstacles.cc)
-target_link_libraries(obstacles ${GAZEBO_LIBRARIES})
+# Link the libraries to the main executable
+target_link_libraries(${EXEC_MAIN} ${LIB_LASER_SCAN_PROCESSOR} ${LIB_ODOM_PROCESSOR} ${LIB_OBSTACLE_AVOIDANCE})
 
-################################################################################
-# Install
-################################################################################
-install(TARGETS ${EXEC_NAME}
+# Install targets
+install(TARGETS ${EXEC_MAIN} ${LIB_LASER_SCAN_PROCESSOR} ${LIB_ODOM_PROCESSOR} ${LIB_OBSTACLE_AVOIDANCE}
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -77,9 +85,6 @@ install(DIRECTORY include/
   DESTINATION include/
 )
 
-################################################################################
-# Macro for ament package
-################################################################################
 ament_export_include_directories(include)
 ament_export_dependencies(gazebo_ros_pkgs)
 ament_export_dependencies(geometry_msgs)
@@ -87,4 +92,5 @@ ament_export_dependencies(nav_msgs)
 ament_export_dependencies(rclcpp)
 ament_export_dependencies(sensor_msgs)
 ament_export_dependencies(tf2)
+ament_export_dependencies(turtlebot3_msgs)
 ament_package()

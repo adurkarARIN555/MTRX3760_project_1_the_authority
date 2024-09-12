@@ -30,13 +30,14 @@ def generate_launch_description():
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
 
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
-    x_pose = LaunchConfiguration('x_pose', default='0.0')
-    y_pose = LaunchConfiguration('y_pose', default='0.0')
+    x_pose = LaunchConfiguration('x_pose', default='-0')
+    y_pose = LaunchConfiguration('y_pose', default='-3.7')
+    yaw_pose = LaunchConfiguration('yaw_pose', default='1.57')  # 90 degrees in radians
 
     world = os.path.join(
         get_package_share_directory('turtlebot3_gazebo'),
         'worlds',
-        'turtlebot3_dqn_stage2.world'
+        'turtlebot3_enclosedmaze.world'
     )
 
     gzserver_cmd = IncludeLaunchDescription(
@@ -65,7 +66,8 @@ def generate_launch_description():
         ),
         launch_arguments={
             'x_pose': x_pose,
-            'y_pose': y_pose
+            'y_pose': y_pose,
+            'yaw_pose': yaw_pose,  # Add yaw_pose here
         }.items()
     )
 

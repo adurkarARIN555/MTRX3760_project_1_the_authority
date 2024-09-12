@@ -228,9 +228,9 @@ void Turtlebot3Drive::update_cmd_vel(double linear, double angular)
 void Turtlebot3Drive::update_callback()
 {
   // Constants for distance thresholds and speeds
-  const double DIST_THRESHOLD_FRONT = 0.3;    // Distance threshold for front wall
-  const double DIST_THRESHOLD_LEFT = 0.3;     // Distance threshold for left wall
-  const double DIST_THRESHOLD_RIGHT = 0.3;    // Distance threshold for right wall
+  const double DIST_THRESHOLD_FRONT = 0.35;    // Distance threshold for front wall
+  const double DIST_THRESHOLD_LEFT = 0.35;     // Distance threshold for left wall
+  const double DIST_THRESHOLD_RIGHT = 0.35;    // Distance threshold for right wall
   const double LINEAR_SPEED = 0.2;            // Linear speed
   const double TURN_SPEED = 1.5;              // Turning speed for sharper U-turns
   const double TURN_SPEED_SLOW = 0.6;         // Slower turning speed for wide turns

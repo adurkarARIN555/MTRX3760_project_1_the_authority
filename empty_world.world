@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+    <?xml version="1.0" ?>
 <sdf version="1.6">
   <world name="default">
 
@@ -28,95 +28,402 @@
       <real_time_factor>1</real_time_factor>
     </physics>
 
-    <!-- South Wall (Scaled Down) -->
-    <model name="wall_south">
+   <!-- Wall segments for the north wall, leaving space for an exit -->
+<model name="wall_north_left">
+  <static>true</static>
+  <link name="link">
+    <collision name="collision">
+      <geometry>
+        <box>
+          <size>5.6 0.1 0.5</size>
+        </box>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <geometry>
+        <box>
+          <size>5.6 0.1 0.5</size>
+        </box>
+      </geometry>
+    </visual>
+    <pose>0 3.55 0.25 0 0 0</pose> <!-- Adjusted position -->
+  </link>
+</model>
+
+
+
+
+    <!-- Wall segments for the south wall, leaving space for an entry -->
+    <model name="wall_south_left">
       <static>true</static>
       <link name="link">
         <collision name="collision">
           <geometry>
             <box>
-              <size>7.5 1 1.25</size> <!-- Scaled down by half -->
+              <size>2.5 0.1 0.5</size>
             </box>
           </geometry>
         </collision>
         <visual name="visual">
           <geometry>
             <box>
-              <size>7.5 1 1.25</size> <!-- Scaled down by half -->
+              <size>2.5 0.1 0.5</size>
             </box>
           </geometry>
         </visual>
-        <pose>0 -3.75 0.625 0 0 0</pose> <!-- Adjusted pose -->
+        <pose>-1.5 -3.55 0.25 0 0 0</pose>
       </link>
     </model>
 
-    <!-- West Wall (Scaled Down) -->
-    <model name="wall_west">
+    <model name="wall_south_right">
       <static>true</static>
       <link name="link">
         <collision name="collision">
           <geometry>
             <box>
-              <size>1 4 1.25</size> <!-- Scaled down by half -->
+              <size>2.5 0.1 0.5</size>
             </box>
           </geometry>
         </collision>
         <visual name="visual">
           <geometry>
             <box>
-              <size>1 4 1.25</size> <!-- Scaled down by half -->
+              <size>2.5 0.1 0.5</size>
             </box>
           </geometry>
         </visual>
-        <pose>-3.75 -2.25 0.625 0 0 0</pose> <!-- Adjusted pose -->
+        <pose>1.5 -3.55 0.25 0 0 0</pose>
       </link>
     </model>
 
-    <!-- East Wall (Scaled Down) -->
+    <model name="entry_nook">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.6 0.1 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.6 0.1 0.5</size>
+            </box>
+          </geometry>
+        </visual>
+        <pose>0 -4 0.25 0 0 0</pose>
+      </link>
+    </model>
+
+
+
+
+    <model name="entry_2">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.1 0.5 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.1 0.5 0.5</size>
+            </box>
+          </geometry>
+        </visual>
+        <pose>-0.25 -3.75 0.25 0 0 0</pose>
+      </link>
+    </model>
+
+    <model name="entry_1">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.1 0.5 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.1 0.5 0.5</size>
+            </box>
+          </geometry>
+        </visual>
+        <pose>0.25 -3.75 0.25 0 0 0</pose>
+      </link>
+    </model>
+
+    <!-- East and West walls remain solid -->
     <model name="wall_east">
       <static>true</static>
       <link name="link">
         <collision name="collision">
           <geometry>
             <box>
-              <size>1 4 1.25</size> <!-- Scaled down by half -->
+              <size>0.1 7.2 0.5</size>
             </box>
           </geometry>
         </collision>
         <visual name="visual">
           <geometry>
             <box>
-              <size>1 4 1.25</size> <!-- Scaled down by half -->
+              <size>0.1 7.2 0.5</size>
             </box>
           </geometry>
         </visual>
-        <pose>3.75 -3.75 0.625 0 0 0</pose> <!-- Adjusted pose -->
+        <pose>2.75 0 0.25 0 0 0</pose>
       </link>
     </model>
 
-    <!-- Central Wall (Scaled Down) -->
-    <model name="wall_center">
+    <model name="wall_west">
       <static>true</static>
       <link name="link">
         <collision name="collision">
           <geometry>
             <box>
-              <size>1 1.25 0.5</size> <!-- Scaled down by half -->
+              <size>0.1 7.2 0.5</size>
             </box>
           </geometry>
         </collision>
         <visual name="visual">
           <geometry>
             <box>
-              <size>1 1.25 0.5</size> <!-- Scaled down by half -->
+              <size>0.1 7.2 0.5</size>
             </box>
           </geometry>
         </visual>
-        <pose>1.8 -1 1.2 0 0 0</pose> <!-- Adjusted pose -->
+        <pose>-2.75 0 0.25 0 0 0</pose>
       </link>
     </model>
 
-    <!-- TurtleBot Starting Position (Unchanged) -->
+    <!-- Inner Maze Walls -->
+
+    <model name="inner_wall_5">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.1 1 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.1 1 0.5</size>
+            </box>
+          </geometry>
+        </visual>
+        <pose>-0.75 3 0.25 0 0 0</pose>
+      </link>
+    </model>
+
+
+    <model name="inner_wall_near_nook">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.1 1 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.1 1 0.5</size>
+            </box>
+          </geometry>
+        </visual>
+        <pose>0.75 -3 0.25 0 0 0</pose>
+      </link>
+    </model>
+    
+    
+    <model name="inner_wall_1">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1 0.1 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 0.1 0.5</size>
+            </box>
+          </geometry>
+        </visual>
+        <pose>-2.2 1.5 0.25 0 0 0</pose>
+      </link>
+    </model>
+
+    <model name="inner_wall_2">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>2.7 0.1 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>2.7 0.1 0.5</size>
+            </box>
+          </geometry>
+        </visual>
+        <pose>0 -1 0.25 0 0 0</pose>
+      </link>
+    </model>
+
+    
+    <model name="inner_wall_3">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1 0.1 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 0.1 0.5</size>
+            </box>
+          </geometry>
+        </visual>
+        <pose>2.25 1.5 0.25 0 0 0</pose>
+      </link>
+    </model>
+    
+        <model name="central_wall_3">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1 0.1 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 0.1 0.5</size>
+            </box>
+          </geometry>
+        </visual>
+        <pose>2.25 1.5 0.25 0 0 0</pose>
+      </link>
+    </model>
+    
+
+        <model name="central_wall_near_finish">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.5 0.1 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.5 0.1 0.5</size>
+            </box>
+          </geometry>
+        </visual>left or to its right.
+3
+        <pose>0.5 1.5 0.25 0 0 0</pose>
+      </link>
+    </model>
+
+    <model name="inner_wall_6">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.1 3.4 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.1 3.4 0.5</size>
+            </box>
+          </geometry>
+        </visual>
+        <pose>-0.75 -0.2 0.25 0 0 0</pose>
+      </link>
+    </model>
+    
+    <model name="central_wall_right">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.1 3 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.1 3 0.5</size>
+            </box>
+          </geometry>
+        </visual>
+        <pose>0.75 0.45 0.25 0 0 0</pose>
+      </link>
+    </model>
+
+
+<!-- Add the green block model at the origin -->
+    <model name="green_block">
+      <pose>0 0 0.1 0 0 0</pose> <!-- Positioned slightly above the ground (0, 0, 0.1) -->
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.2</size> <!-- Block size 20 cm -->
+            </box>
+          </geometry>
+          <material>
+            <ambient>0 1 0 1</ambient> <!-- Green color -->
+            <diffuse>0 1 0 1</diffuse> <!-- Green color -->
+          </material>
+        </visual>
+      </link>
+    </model>
+    
+    
+    
+    <!-- TurtleBot Starting Position in the Entry Nook -->
     <model name="turtlebot3_burger">
       <static>false</static>
       <link name="link">
@@ -128,8 +435,9 @@
           </geometry>
         </visual>
       </link>
-      <pose>3.5 -3.5 0.1 0 0 0</pose> <!-- Starts within the scaled maze -->
+      <pose>0 -6.5 0.1 0 0 0</pose> <!-- Starts in the Entry Nook -->
     </model>
 
   </world>
 </sdf>
+

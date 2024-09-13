@@ -64,16 +64,36 @@ set(LIB_OBSTACLE_AVOIDANCE "obstacle_avoidance")
 add_library(${LIB_OBSTACLE_AVOIDANCE} src/obstacle_avoidance.cpp)
 ament_target_dependencies(${LIB_OBSTACLE_AVOIDANCE} ${dependencies})
 
+set(LIB_SENSOR_DATA_PROCESSOR "sensor_data_processor")
+add_library(${LIB_SENSOR_DATA_PROCESSOR} src/sensor_data_processor.cpp)
+ament_target_dependencies(${LIB_SENSOR_DATA_PROCESSOR} ${dependencies})
+
+set(LIB_ROBOT_POSE_PROCESSOR "robot_pose_processor")
+add_library(${LIB_ROBOT_POSE_PROCESSOR} src/robot_pose_processor.cpp)
+ament_target_dependencies(${LIB_ROBOT_POSE_PROCESSOR} ${dependencies})
+
+set(LIB_VELOCITY_COMMANDER "velocity_commander")
+add_library(${LIB_VELOCITY_COMMANDER} src/velocity_commander.cpp)
+ament_target_dependencies(${LIB_VELOCITY_COMMANDER} ${dependencies})
+
 # Define the main executable
 set(EXEC_MAIN "main")
 add_executable(${EXEC_MAIN} src/main.cpp)
 ament_target_dependencies(${EXEC_MAIN} ${dependencies})
 
 # Link the libraries to the main executable
-target_link_libraries(${EXEC_MAIN} ${LIB_LASER_SCAN_PROCESSOR} ${LIB_ODOM_PROCESSOR} ${LIB_OBSTACLE_AVOIDANCE})
+target_link_libraries(${EXEC_MAIN} 
+  ${LIB_LASER_SCAN_PROCESSOR} 
+  ${LIB_ODOM_PROCESSOR} 
+  ${LIB_OBSTACLE_AVOIDANCE} 
+  ${LIB_SENSOR_DATA_PROCESSOR}
+  ${LIB_ROBOT_POSE_PROCESSOR}
+  ${LIB_VELOCITY_COMMANDER}
+)
 
 # Install targets
-install(TARGETS ${EXEC_MAIN} ${LIB_LASER_SCAN_PROCESSOR} ${LIB_ODOM_PROCESSOR} ${LIB_OBSTACLE_AVOIDANCE}
+install(TARGETS ${EXEC_MAIN} ${LIB_LASER_SCAN_PROCESSOR} ${LIB_ODOM_PROCESSOR} ${LIB_OBSTACLE_AVOIDANCE} 
+  ${LIB_SENSOR_DATA_PROCESSOR} ${LIB_ROBOT_POSE_PROCESSOR} ${LIB_VELOCITY_COMMANDER}
   DESTINATION lib/${PROJECT_NAME}
 )
 

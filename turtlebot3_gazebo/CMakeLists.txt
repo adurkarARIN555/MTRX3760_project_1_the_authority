@@ -31,6 +31,8 @@ find_package(turtlebot3_msgs REQUIRED)
 find_package(visualization_msgs REQUIRED)
 find_package(gazebo_msgs REQUIRED)
 find_package(rcl_interfaces REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(OpenCV REQUIRED)
 
 
 ################################################################################
@@ -48,6 +50,8 @@ include_directories(
   ${rclcpp_INCLUDE_DIRS}
   ${rcl_interfaces_INCLUDE_DIRS} 
   ${visualization_msgs_INCLUDE_DIRS}
+  ${cv_bridge_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
 )
 
 set(dependencies
@@ -60,6 +64,8 @@ set(dependencies
   "visualization_msgs"
   "gazebo_msgs"
   "rcl_interfaces"
+  "cv_bridge"
+  "OpenCV"
 )
 
 # Define the libraries
@@ -87,6 +93,10 @@ set(LIB_VELOCITY_COMMANDER "velocity_commander")
 add_library(${LIB_VELOCITY_COMMANDER} src/velocity_commander.cpp)
 ament_target_dependencies(${LIB_VELOCITY_COMMANDER} ${dependencies})
 
+set(LIB_COLOR_DETECTOR "color_detector")
+add_library(${LIB_COLOR_DETECTOR} src/color_detector.cpp)
+ament_target_dependencies(${LIB_COLOR_DETECTOR} ${dependencies})
+
 # Define the main executable
 set(EXEC_MAIN "main")
 add_executable(${EXEC_MAIN} src/main.cpp)
@@ -102,6 +112,7 @@ target_link_libraries(${EXEC_MAIN}
   ${LIB_SENSOR_DATA_PROCESSOR}
   ${LIB_ROBOT_POSE_PROCESSOR}
   ${LIB_VELOCITY_COMMANDER}
+  ${LIB_COLOR_DETECTOR}
 )
 
 # Define the points_and_lines executable
@@ -115,7 +126,7 @@ target_link_libraries(maze_visualiser ${GAZEBO_LIBRARIES} ${visualization_msgs_L
 
 # Install targets
 install(TARGETS ${EXEC_MAIN} ${LIB_LASER_SCAN_PROCESSOR} ${LIB_ODOM_PROCESSOR} ${LIB_OBSTACLE_AVOIDANCE}
-  ${LIB_SENSOR_DATA_PROCESSOR} ${LIB_ROBOT_POSE_PROCESSOR} ${LIB_VELOCITY_COMMANDER} points_and_lines maze_visualiser
+  ${LIB_SENSOR_DATA_PROCESSOR} ${LIB_ROBOT_POSE_PROCESSOR} ${LIB_VELOCITY_COMMANDER} ${LIB_COLOR_DETECTOR} points_and_lines maze_visualiser
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -138,4 +149,6 @@ ament_export_dependencies(turtlebot3_msgs)
 ament_export_dependencies(gazebo_msgs)
 ament_export_dependencies(rcl_interfaces)
 ament_export_dependencies(visualization_msgs)
+ament_export_dependencies(cv_bridge)
+ament_export_dependencies(OpenCV)
 ament_package()

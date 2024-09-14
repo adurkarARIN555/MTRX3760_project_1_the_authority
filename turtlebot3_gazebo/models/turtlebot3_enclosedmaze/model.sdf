@@ -435,6 +435,26 @@
       </visual>
     </link>
 
+    <link name='Green_Block'>
+      <pose> 1.5 3.8 0.25 0 0 0</pose> <!-- Positioned flush with the floor (0.1m to account for half the block height) -->
+      
+      <!-- Visual representation of the green block -->
+      <visual name='Green_Block_Visual'>
+        <geometry>
+          <box>
+            <size>0.5 0.3 0.5</size> <!-- Block size 1x1x1 meter -->
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name> <!-- Change if you want a different material -->
+          </script>
+          <ambient>0 1 0 1</ambient> <!-- Green color -->
+        </material>
+      </visual>
+    </link>
+
     <!-- TurtleBot Starting Position -->
     <link name='TurtleBot'>
       <visual name='TurtleBot_Visual'>

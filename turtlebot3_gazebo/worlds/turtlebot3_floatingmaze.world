@@ -28,30 +28,27 @@
       <real_time_factor>1</real_time_factor>
     </physics>
 
-   <!-- Wall segments for the north wall, leaving space for an exit -->
-<model name="wall_north_left">
-  <static>true</static>
-  <link name="link">
-    <collision name="collision">
-      <geometry>
-        <box>
-          <size>5.6 0.1 0.5</size>
-        </box>
-      </geometry>
-    </collision>
-    <visual name="visual">
-      <geometry>
-        <box>
-          <size>5.6 0.1 0.5</size>
-        </box>
-      </geometry>
-    </visual>
-    <pose>0 3.55 0.25 0 0 0</pose> <!-- Adjusted position -->
-  </link>
-</model>
-
-
-
+      <!-- Wall segments for the north wall, leaving space for an exit -->
+    <model name="wall_north_left">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>5.6 0.1 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>5.6 0.1 0.5</size>
+            </box>
+          </geometry>
+        </visual>
+        <pose>0 3.55 0.25 0 0 0</pose> <!-- Adjusted position -->
+      </link>
+    </model>
 
     <!-- Wall segments for the south wall, leaving space for an entry -->
     <model name="wall_south_left">
@@ -116,9 +113,6 @@
         <pose>0 -4 0.25 0 0 0</pose>
       </link>
     </model>
-
-
-
 
     <model name="entry_2">
       <static>true</static>
@@ -315,7 +309,7 @@
       </link>
     </model>
     
-        <model name="central_wall_3">
+    <model name="central_wall_3">
       <static>true</static>
       <link name="link">
         <collision name="collision">
@@ -337,7 +331,7 @@
     </model>
     
 
-        <model name="central_wall_near_finish">
+    <model name="central_wall_near_finish">
       <static>true</static>
       <link name="link">
         <collision name="collision">
@@ -404,13 +398,13 @@
 
 <!-- Add the green block model at the origin -->
     <model name="green_block">
-      <pose>0 0 0.1 0 0 0</pose> <!-- Positioned slightly above the ground (0, 0, 0.1) -->
+      <pose>0 0 0.5 0 0 0</pose> <!-- Positioned slightly above the ground (0, 0, 0.1) -->
       <static>true</static>
       <link name="link">
         <visual name="visual">
           <geometry>
             <box>
-              <size>0.2 0.2 0.2</size> <!-- Block size 20 cm -->
+              <size>0.5 0.5 0.2</size> <!-- Block size 20 cm -->
             </box>
           </geometry>
           <material>

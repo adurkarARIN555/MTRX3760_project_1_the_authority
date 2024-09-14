@@ -29,6 +29,9 @@ find_package(sensor_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(turtlebot3_msgs REQUIRED)
 find_package(visualization_msgs REQUIRED)
+find_package(gazebo_msgs REQUIRED)
+find_package(rcl_interfaces REQUIRED)
+
 
 ################################################################################
 # Build
@@ -41,6 +44,10 @@ include_directories(
   include
   ${GAZEBO_INCLUDE_DIRS}
   ${turtlebot3_msgs_INCLUDE_DIRS}
+  ${GAZEBO_MSGS_INCLUDE_DIRS}
+  ${rclcpp_INCLUDE_DIRS}
+  ${rcl_interfaces_INCLUDE_DIRS} 
+  ${visualization_msgs_INCLUDE_DIRS}
 )
 
 set(dependencies
@@ -51,6 +58,8 @@ set(dependencies
   "tf2"
   "turtlebot3_msgs" 
   "visualization_msgs"
+  "gazebo_msgs"
+  "rcl_interfaces"
 )
 
 # Define the libraries
@@ -84,6 +93,7 @@ add_executable(${EXEC_MAIN} src/main.cpp)
 ament_target_dependencies(${EXEC_MAIN} ${dependencies})
 
 
+
 # Link the libraries to the main executable
 target_link_libraries(${EXEC_MAIN} 
   ${LIB_LASER_SCAN_PROCESSOR} 
@@ -99,9 +109,13 @@ add_executable(points_and_lines src/points_and_lines.cpp)
 ament_target_dependencies(points_and_lines ${dependencies})
 target_link_libraries(points_and_lines ${GAZEBO_LIBRARIES} ${visualization_msgs_LIBRARIES})
 
+add_executable(maze_visualiser src/maze_visualiser.cpp)
+ament_target_dependencies(maze_visualiser ${dependencies})  # Update to ${dependencies}
+target_link_libraries(maze_visualiser ${GAZEBO_LIBRARIES} ${visualization_msgs_LIBRARIES})
+
 # Install targets
 install(TARGETS ${EXEC_MAIN} ${LIB_LASER_SCAN_PROCESSOR} ${LIB_ODOM_PROCESSOR} ${LIB_OBSTACLE_AVOIDANCE}
-  ${LIB_SENSOR_DATA_PROCESSOR} ${LIB_ROBOT_POSE_PROCESSOR} ${LIB_VELOCITY_COMMANDER} points_and_lines
+  ${LIB_SENSOR_DATA_PROCESSOR} ${LIB_ROBOT_POSE_PROCESSOR} ${LIB_VELOCITY_COMMANDER} points_and_lines maze_visualiser
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -121,4 +135,7 @@ ament_export_dependencies(rclcpp)
 ament_export_dependencies(sensor_msgs)
 ament_export_dependencies(tf2)
 ament_export_dependencies(turtlebot3_msgs)
+ament_export_dependencies(gazebo_msgs)
+ament_export_dependencies(rcl_interfaces)
+ament_export_dependencies(visualization_msgs)
 ament_package()

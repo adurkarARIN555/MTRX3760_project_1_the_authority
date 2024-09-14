@@ -7,7 +7,7 @@ class VelocityCommander {
 public:
   VelocityCommander() : FINISH_LINE_Y(3.6) {}
 
-  geometry_msgs::msg::Twist generate_velocity_command(double front_dist, double left_dist, double right_dist, double robot_y);
+ geometry_msgs::msg::Twist generate_velocity_command(double front_dist, double left_dist, double right_dist, double green_percentage);
 
 private:
   const double FINISH_LINE_Y;

@@ -8,7 +8,7 @@ ColorDetector::ColorDetector()
     subscription_ = this->create_subscription<sensor_msgs::msg::Image>(
         "camera/image_raw", 10, std::bind(&ColorDetector::image_callback, this, std::placeholders::_1));
 
-    green_percentage_pub_ = this->create_publisher<std_msgs::msg::Float32>("green_percentage", 10);
+    green_percentage_pub_ = this->create_publisher<std_msgs::msg::Float64>("green_color_percentage", 10);
     green_detected_pub_ = this->create_publisher<std_msgs::msg::Bool>("green_detected", 10);
 
     RCLCPP_INFO(this->get_logger(), "Color detector node has been initialized");
@@ -34,7 +34,7 @@ void ColorDetector::image_callback(sensor_msgs::msg::Image::SharedPtr msg)
     float green_percentage = (green_pixel_count / (float)total_pixels) * 100.0f;
 
     // Publish the green percentage
-    std_msgs::msg::Float32 green_percentage_msg;
+    std_msgs::msg::Float64 green_percentage_msg;
     green_percentage_msg.data = green_percentage;
     green_percentage_pub_->publish(green_percentage_msg);
 
@@ -43,15 +43,17 @@ void ColorDetector::image_callback(sensor_msgs::msg::Image::SharedPtr msg)
     green_detected_msg.data = (green_pixel_count > 0);
     green_detected_pub_->publish(green_detected_msg);
 
+    RCLCPP_INFO(this->get_logger(), "Green color detected: %.2f%%", green_percentage);
+
     // Optionally, print the detection info to the terminal
-    if (green_detected_msg.data)
-    {
-        RCLCPP_INFO(this->get_logger(), "Green color detected: %.2f%%", green_percentage);
-    }
-    else
-    {
-        RCLCPP_INFO(this->get_logger(), "No green color detected");
-    }
+    // if (green_detected_msg.data)
+    // {
+    //     RCLCPP_INFO(this->get_logger(), "Green color detected: %.2f%%", green_percentage);
+    // }
+    // else
+    // {
+    //     RCLCPP_INFO(this->get_logger(), "No green color detected");
+    // }
 }
 
 

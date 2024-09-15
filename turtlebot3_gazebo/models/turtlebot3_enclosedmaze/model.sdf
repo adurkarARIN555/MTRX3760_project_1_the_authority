@@ -130,31 +130,6 @@
         </material>
       </visual>
     </link>
-<!-- 
-    <link name='Exit_Nook'>
-      <pose>3.15 -2.35 0.25 0 0 0</pose>
-      <collision name='Exit_Nook_Collision'>
-        <geometry>
-          <box>
-            <size>0.1 0.6 0.5</size>
-          </box>
-        </geometry>
-      </collision>
-      <visual name='Exit_Nook_Visual'>
-        <geometry>
-          <box>
-            <size>0.1 0.6 0.5</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Grey</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-      </visual>
-    </link> -->
 
     <!-- Entry and Exit Markers -->
     <link name='Exit_1'>

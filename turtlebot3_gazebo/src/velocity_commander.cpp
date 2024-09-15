@@ -1,6 +1,6 @@
 #include "velocity_commander.hpp"
 
-geometry_msgs::msg::Twist VelocityCommander::generate_velocity_command(double front_dist, double left_dist, double right_dist, double green_percentage) 
+geometry_msgs::msg::Twist VelocityCommander::generate_velocity_command(double front_dist, double left_dist, double right_dist, double green_percentage, double green_goal_x) 
 {
     const double DIST_THRESHOLD_FRONT = 0.35;
     const double DIST_THRESHOLD_LEFT = 0.35;
@@ -19,6 +19,16 @@ geometry_msgs::msg::Twist VelocityCommander::generate_velocity_command(double fr
     {
       linear_speed = 0.0;
       angular_speed = 0.0;
+    } 
+    else if (green_percentage >= 10) 
+    {
+        // Center the robot towards the green goal
+        if (green_goal_x > 0.1) {
+            angular_speed = -0.5; // Turn left
+        } else if (green_goal_x < -0.1) {
+            angular_speed = 0.5; // Turn right
+        }
+        linear_speed = LINEAR_SPEED;
     } 
     else if (left_dist < DIST_THRESHOLD_LEFT && front_dist < DIST_THRESHOLD_FRONT) 
     {

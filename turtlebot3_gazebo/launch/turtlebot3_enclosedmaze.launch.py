@@ -67,7 +67,7 @@ def generate_launch_description():
         launch_arguments={
             'x_pose': x_pose,
             'y_pose': y_pose,
-            'yaw_pose': yaw_pose,  # Add yaw_pose here
+            'yaw_pose': yaw_pose,
         }.items()
     )
 

@@ -11,7 +11,17 @@ ColorDetector::ColorDetector()
     green_percentage_pub_ = this->create_publisher<std_msgs::msg::Float64>("green_color_percentage", 10);
     green_detected_pub_ = this->create_publisher<std_msgs::msg::Bool>("green_detected", 10);
 
+    green_goal_pos_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("green_goal_position", rclcpp::QoS(10));
+
     RCLCPP_INFO(this->get_logger(), "Color detector node has been initialized");
+}
+
+void ColorDetector::publish_green_goal_position(double x_offset, double y_offset)
+{
+    auto msg = std_msgs::msg::Float64MultiArray();
+    msg.data = {x_offset, y_offset};  // Store the values in the data array
+
+    green_goal_pos_pub_->publish(msg);
 }
 
 void ColorDetector::image_callback(sensor_msgs::msg::Image::SharedPtr msg)
@@ -42,6 +52,21 @@ void ColorDetector::image_callback(sensor_msgs::msg::Image::SharedPtr msg)
     std_msgs::msg::Bool green_detected_msg;
     green_detected_msg.data = (green_pixel_count > 0);
     green_detected_pub_->publish(green_detected_msg);
+
+    // Compute the moments of the green mask to find the centroid
+    cv::Moments moments = cv::moments(green_mask, true);
+
+    if (moments.m00 > 0) // Ensure the mask is not empty
+    {
+        double cx = moments.m10 / moments.m00;
+        double cy = moments.m01 / moments.m00;
+
+        // Assuming the center of the image is the origin (0,0)
+        double x_offset = cx - (hsv_image.cols / 2);
+        double y_offset = cy - (hsv_image.rows / 2);
+
+        publish_green_goal_position(x_offset, y_offset);
+    }
 
     RCLCPP_INFO(this->get_logger(), "Green color detected: %.2f%%", green_percentage);
 

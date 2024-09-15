@@ -12,6 +12,7 @@ public:
   ~LaserScanProcessor();
 
 private:
+  uint16_t scan_angle[3] = {0, 30, 330};
   void scan_callback(const sensor_msgs::msg::LaserScan::SharedPtr msg);
 
   rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr scan_sub_;

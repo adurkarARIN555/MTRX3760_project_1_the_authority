@@ -1,25 +1,27 @@
 #include "color_detector.hpp"
-#include "std_msgs/msg/float32.hpp"
-#include "std_msgs/msg/bool.hpp"
 
 ColorDetector::ColorDetector()
 : Node("color_detector")
 {
     subscription_ = this->create_subscription<sensor_msgs::msg::Image>(
-        "camera/image_raw", 10, std::bind(&ColorDetector::image_callback, this, std::placeholders::_1));
+    "camera/image_raw", 10, std::bind(&ColorDetector::image_callback, this, std::placeholders::_1));
 
     green_percentage_pub_ = this->create_publisher<std_msgs::msg::Float64>("green_color_percentage", 10);
-    green_detected_pub_ = this->create_publisher<std_msgs::msg::Bool>("green_detected", 10);
-
     green_goal_pos_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("green_goal_position", rclcpp::QoS(10));
 
     RCLCPP_INFO(this->get_logger(), "Color detector node has been initialized");
 }
 
+ColorDetector::~ColorDetector()
+{
+    RCLCPP_INFO(this->get_logger(), "Color detector node has been terminated");
+}
+
 void ColorDetector::publish_green_goal_position(double x_offset, double y_offset)
 {
+    // Publishes the goal position in the camera frame
     auto msg = std_msgs::msg::Float64MultiArray();
-    msg.data = {x_offset, y_offset};  // Store the values in the data array
+    msg.data = {x_offset, y_offset};
 
     green_goal_pos_pub_->publish(msg);
 }
@@ -27,59 +29,25 @@ void ColorDetector::publish_green_goal_position(double x_offset, double y_offset
 void ColorDetector::image_callback(sensor_msgs::msg::Image::SharedPtr msg)
 {
     cv_bridge::CvImagePtr cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
-
     cv::Mat image = cv_ptr->image;
-    cv::Mat hsv_image;
-    cv::cvtColor(image, hsv_image, cv::COLOR_BGR2HSV);
 
-    // Define the range for green color
-    cv::Scalar lower_green(35, 100, 100);
-    cv::Scalar upper_green(85, 255, 255);
-    cv::Mat green_mask;
-    cv::inRange(hsv_image, lower_green, upper_green, green_mask);
-
-    // Count the number of green pixels
-    int green_pixel_count = cv::countNonZero(green_mask);
-    int total_pixels = image.rows * image.cols;
-    float green_percentage = (green_pixel_count / (float)total_pixels) * 100.0f;
+    // Use the ImageProcessor instance to calculate the green percentage
+    green_percentage = image_processor_.calculate_green_percentage(image);
 
     // Publish the green percentage
     std_msgs::msg::Float64 green_percentage_msg;
     green_percentage_msg.data = green_percentage;
     green_percentage_pub_->publish(green_percentage_msg);
 
-    // Publish whether green is detected (above a certain threshold)
-    std_msgs::msg::Bool green_detected_msg;
-    green_detected_msg.data = (green_pixel_count > 0);
-    green_detected_pub_->publish(green_detected_msg);
+    // Use ImageProcessor to find the centroid and store it in the class variable
+    green_centroid_ = image_processor_.find_green_centroid(image);
 
-    // Compute the moments of the green mask to find the centroid
-    cv::Moments moments = cv::moments(green_mask, true);
-
-    if (moments.m00 > 0) // Ensure the mask is not empty
+    // Check if the centroid is valid (not (0, 0)), and if so, publish the goal position
+    if (green_centroid_.first != 0 || green_centroid_.second != 0)
     {
-        double cx = moments.m10 / moments.m00;
-        double cy = moments.m01 / moments.m00;
-
-        // Assuming the center of the image is the origin (0,0)
-        double x_offset = cx - (hsv_image.cols / 2);
-        double y_offset = cy - (hsv_image.rows / 2);
-
+        double x_offset = green_centroid_.first - (image.cols / 2);
+        double y_offset = green_centroid_.second - (image.rows / 2);
         publish_green_goal_position(x_offset, y_offset);
     }
-
-    RCLCPP_INFO(this->get_logger(), "Green color detected: %.2f%%", green_percentage);
-
-    // Optionally, print the detection info to the terminal
-    // if (green_detected_msg.data)
-    // {
-    //     RCLCPP_INFO(this->get_logger(), "Green color detected: %.2f%%", green_percentage);
-    // }
-    // else
-    // {
-    //     RCLCPP_INFO(this->get_logger(), "No green color detected");
-    // }
 }
-
-
 

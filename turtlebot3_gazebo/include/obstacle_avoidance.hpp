@@ -10,26 +10,28 @@
 #include <std_msgs/msg/float64_multi_array.hpp>
 #include "geometry_msgs/msg/point.hpp"
 
-
 class ObstacleAvoidance : public rclcpp::Node {
 public:
-  ObstacleAvoidance();
+   ObstacleAvoidance();
   ~ObstacleAvoidance();
 
 private:
   void sensor_data_callback(const std_msgs::msg::Float64MultiArray::SharedPtr msg);
-  void robot_pose_callback(const turtlebot3_msgs::msg::YawY::SharedPtr msg);
+  void robot_pose_callback(const std_msgs::msg::Float64::SharedPtr msg);
+  void green_percentage_callback(const std_msgs::msg::Float64::SharedPtr msg);
   void green_goal_position_callback(const std_msgs::msg::Float64MultiArray::SharedPtr msg);
 
   rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr sensor_data_sub_;
-  rclcpp::Subscription<turtlebot3_msgs::msg::YawY>::SharedPtr yaw_y_sub_;
+  rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr yaw_sub_;
   rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr green_percentage_sub_;
   rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr green_goal_position_sub_;
+  
   rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmd_vel_pub_;
 
   double green_percentage_;
   double green_goal_x_;
   double green_goal_y_;
+  double robot_yaw_;
 
   SensorDataProcessor sensor_data_processor_;
   RobotPoseProcessor robot_pose_processor_;

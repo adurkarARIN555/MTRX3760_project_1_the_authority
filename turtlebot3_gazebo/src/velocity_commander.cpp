@@ -2,59 +2,62 @@
 
 geometry_msgs::msg::Twist VelocityCommander::generate_velocity_command(double front_dist, double left_dist, double right_dist, double green_percentage, double green_goal_x) 
 {
-    const double DIST_THRESHOLD_FRONT = 0.35;
-    const double DIST_THRESHOLD_LEFT = 0.35;
-    const double DIST_THRESHOLD_RIGHT = 0.35;
-    const double LINEAR_SPEED = 0.2;
-    const double TURN_SPEED = 1.5;
-    const double TURN_SPEED_SLOW = 0.6;
-    const double TURN_SPEED_FAST_RIGHT = 1.5;
-    const double GREEN_THRESHOLD = 91.0;
-
-    geometry_msgs::msg::Twist cmd_vel;
-    double linear_speed = LINEAR_SPEED;
-    double angular_speed = 0.0;
-
-    if (green_percentage >= GREEN_THRESHOLD) 
+    if (green_percentage >= GOAL_MET_THRESHOLD) 
     {
-      linear_speed = 0.0;
-      angular_speed = 0.0;
+        linear_speed  = NO_MOVEMENT;
+        angular_speed = NO_MOVEMENT;
     } 
-    else if (green_percentage >= 10) 
+    else if (green_percentage >= GOAL_DETECTED_THRESHOLD) 
     {
-        // Center the robot towards the green goal
-        if (green_goal_x > 0.1) {
-            angular_speed = -0.5; // Turn left
-        } else if (green_goal_x < -0.1) {
-            angular_speed = 0.5; // Turn right
-        }
-        linear_speed = LINEAR_SPEED;
-    } 
-    else if (left_dist < DIST_THRESHOLD_LEFT && front_dist < DIST_THRESHOLD_FRONT) 
-    {
-      angular_speed = -TURN_SPEED_FAST_RIGHT;
-      linear_speed = 0.0;
-    } 
-    else if (left_dist < DIST_THRESHOLD_LEFT) 
-    {
-      angular_speed = -TURN_SPEED;
-    } 
-    else if (front_dist < DIST_THRESHOLD_FRONT) 
-    {
-      angular_speed = TURN_SPEED;
-    } 
-    else if (right_dist < DIST_THRESHOLD_RIGHT) 
-    {
-      linear_speed = LINEAR_SPEED;
-      angular_speed = TURN_SPEED_SLOW;
+        handle_green_detection(green_goal_x, linear_speed, angular_speed);
     } 
     else 
     {
-      linear_speed = LINEAR_SPEED;
-      angular_speed = TURN_SPEED_SLOW;
+        handle_wall_avoidance(front_dist, left_dist, right_dist, linear_speed, angular_speed);
     }
 
-    cmd_vel.linear.x = linear_speed;
+    geometry_msgs::msg::Twist cmd_vel;
+    cmd_vel.linear.x  = linear_speed;
     cmd_vel.angular.z = angular_speed;
     return cmd_vel;
-  }
+}
+
+void VelocityCommander::handle_green_detection(double green_goal_x, double& linear_speed, double& angular_speed)
+{
+    if (green_goal_x > GOAL_CENTRING_POS) 
+    {
+        angular_speed = -GOAL_TURN_SPEED; // Turn left
+    } 
+    else if (green_goal_x < -GOAL_CENTRING_POS) 
+    {
+        angular_speed = GOAL_TURN_SPEED; // Turn right
+    }
+    linear_speed = LINEAR_SPEED;
+}
+
+void VelocityCommander::handle_wall_avoidance(double front_dist, double left_dist, double right_dist, double& linear_speed, double& angular_speed)
+{
+    if (left_dist < DIST_THRESHOLD_LEFT && front_dist < DIST_THRESHOLD_FRONT) 
+    {
+        angular_speed = -TURN_SPEED;
+        linear_speed  =  NO_MOVEMENT;
+    } 
+    else if (left_dist < DIST_THRESHOLD_LEFT) 
+    {
+        angular_speed = -TURN_SPEED;
+    } 
+    else if (front_dist < DIST_THRESHOLD_FRONT) 
+    {
+        angular_speed = TURN_SPEED;
+    } 
+    else if (right_dist < DIST_THRESHOLD_RIGHT) 
+    {
+        linear_speed  = LINEAR_SPEED;
+        angular_speed = TURN_SPEED_SLOW;
+    } 
+    else 
+    {
+        linear_speed  = LINEAR_SPEED;
+        angular_speed = TURN_SPEED_SLOW;
+    }
+}

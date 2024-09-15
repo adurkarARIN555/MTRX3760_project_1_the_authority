@@ -97,6 +97,10 @@ set(LIB_COLOR_DETECTOR "color_detector")
 add_library(${LIB_COLOR_DETECTOR} src/color_detector.cpp)
 ament_target_dependencies(${LIB_COLOR_DETECTOR} ${dependencies})
 
+set(LIB_IMAGE_PROCESSOR "image_processor")
+add_library(${LIB_IMAGE_PROCESSOR} src/image_processor.cpp)
+ament_target_dependencies(${LIB_IMAGE_PROCESSOR} ${dependencies})
+
 # Define the main executable
 set(EXEC_MAIN "main")
 add_executable(${EXEC_MAIN} src/main.cpp)
@@ -113,20 +117,12 @@ target_link_libraries(${EXEC_MAIN}
   ${LIB_ROBOT_POSE_PROCESSOR}
   ${LIB_VELOCITY_COMMANDER}
   ${LIB_COLOR_DETECTOR}
+  ${LIB_IMAGE_PROCESSOR}
 )
-
-# Define the points_and_lines executable
-add_executable(points_and_lines src/points_and_lines.cpp)
-ament_target_dependencies(points_and_lines ${dependencies})
-target_link_libraries(points_and_lines ${GAZEBO_LIBRARIES} ${visualization_msgs_LIBRARIES})
-
-add_executable(maze_visualiser src/maze_visualiser.cpp)
-ament_target_dependencies(maze_visualiser ${dependencies})  # Update to ${dependencies}
-target_link_libraries(maze_visualiser ${GAZEBO_LIBRARIES} ${visualization_msgs_LIBRARIES})
 
 # Install targets
 install(TARGETS ${EXEC_MAIN} ${LIB_LASER_SCAN_PROCESSOR} ${LIB_ODOM_PROCESSOR} ${LIB_OBSTACLE_AVOIDANCE}
-  ${LIB_SENSOR_DATA_PROCESSOR} ${LIB_ROBOT_POSE_PROCESSOR} ${LIB_VELOCITY_COMMANDER} ${LIB_COLOR_DETECTOR} points_and_lines maze_visualiser
+  ${LIB_SENSOR_DATA_PROCESSOR} ${LIB_ROBOT_POSE_PROCESSOR} ${LIB_VELOCITY_COMMANDER} ${LIB_COLOR_DETECTOR} ${LIB_IMAGE_PROCESSOR}
   DESTINATION lib/${PROJECT_NAME}
 )
 

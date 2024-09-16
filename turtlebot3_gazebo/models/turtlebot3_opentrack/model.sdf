@@ -81,7 +81,7 @@
       </visual>
     </link>
 
-    <!-- Central Wall (Scaled Down) -->
+    <!-- Central Wall (Scaled Down)
     <link name='Wall_Center'>
       <pose>1 -1 0.25 0 0 0</pose>
       <collision name='Wall_Center_Collision'>
@@ -105,7 +105,89 @@
           <ambient>1 1 1 1</ambient>
         </material>
       </visual>
-    </link>
+    </link> -->
+
+<!-- U-Shaped Block (with 0.5x0.5 entrance) -->
+<link name='Wall_U_Shape'>
+  <pose>1 -1 0.25 0 0 0</pose>
+
+  <!-- Left Wall Section -->
+  <collision name='Wall_U_Left_Collision'>
+    <geometry>
+      <box>
+        <size>0.25 0.2 0.5</size>
+      </box>
+    </geometry>
+    <pose>-0.375 0.15 0 0 0 0</pose> <!-- Position the left wall on the left side -->
+  </collision>
+  <visual name='Wall_U_Left_Visual'>
+    <geometry>
+      <box>
+        <size>0.25 0.2 0.5</size>
+      </box>
+    </geometry>
+    <pose>-0.375 0.15 0 0 0 0</pose> <!-- Match the left wall position -->
+    <material>
+      <script>
+        <uri>file://media/materials/scripts/gazebo.material</uri>
+        <name>Gazebo/Grey</name>
+      </script>
+      <ambient>1 1 1 1</ambient>
+    </material>
+  </visual>
+
+  <!-- Right Wall Section -->
+  <collision name='Wall_U_Right_Collision'>
+    <geometry>
+      <box>
+        <size>0.25 0.2 0.5</size>
+      </box>
+    </geometry>
+    <pose>0.375 0.15 0 0 0 0</pose> <!-- Position the right wall on the right side -->
+  </collision>
+  <visual name='Wall_U_Right_Visual'>
+    <geometry>
+      <box>
+        <size>0.25 0.2 0.5</size>
+      </box>
+    </geometry>
+    <pose>0.375 0.15 0 0 0 0</pose> <!-- Match the right wall position -->
+    <material>
+      <script>
+        <uri>file://media/materials/scripts/gazebo.material</uri>
+        <name>Gazebo/Grey</name>
+      </script>
+      <ambient>1 1 1 1</ambient>
+    </material>
+  </visual>
+
+  <!-- Top Wall Section -->
+  <collision name='Wall_U_Top_Collision'>
+    <geometry>
+      <box>
+        <size>1 0.25 0.5</size>
+      </box>
+    </geometry>
+    <pose>0 0.375 0 0 0 0</pose> <!-- Position the top wall at the top of the U -->
+  </collision>
+  <visual name='Wall_U_Top_Visual'>
+    <geometry>
+      <box>
+        <size>1 0.25 0.5</size>
+      </box>
+    </geometry>
+    <pose>0 0.375 0 0 0 0</pose> <!-- Match the top wall position -->
+    <material>
+      <script>
+        <uri>file://media/materials/scripts/gazebo.material</uri>
+        <name>Gazebo/Grey</name>
+      </script>
+      <ambient>1 1 1 1</ambient>
+    </material>
+  </visual>
+
+</link>
+
 
     <link name='Wall_goal'>
       <pose>-2.25 -4.05 0.25 0 0 0</pose>
@@ -144,12 +226,31 @@
         <material>
           <script>
             <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Grey</name>
+            <name>Gazebo/Green</name>
           </script>
           <ambient>0 1 0 1</ambient>
         </material>
       </visual>
     </link>
+
+      <!-- Green Block inside the U-Shape (without collision) -->
+  <link name='Green_Block2'>
+    <pose>1 -0.85 0.25 0 0 0</pose> <!-- Position it inside the U-shape -->
+    <visual name='Green_Block2_Visual'>
+      <geometry>
+        <box>
+          <size>0.5 0.2 0.5</size> <!-- 0.2 thick green block -->
+        </box>
+      </geometry>
+      <material>
+        <script>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+          <name>Gazebo/Green</name> <!-- Green material -->
+        </script>
+        <ambient>0 1 0 1</ambient> <!-- Green color -->
+      </material>
+    </visual>
+  </link>
 
 
     <!-- TurtleBot Starting Position -->

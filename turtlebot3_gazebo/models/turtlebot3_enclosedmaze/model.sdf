@@ -411,19 +411,19 @@
     </link>
 
     <link name='Green_Block'>
-      <pose> 3.35 -2.35 0.25 0 0 0</pose> <!-- Positioned flush with the floor (0.1m to account for half the block height) -->
+      <pose> 3.3 -2.35 0.25 0 0 0</pose> <!-- Positioned flush with the floor (0.1m to account for half the block height) -->
       
       <!-- Visual representation of the green block -->
       <visual name='Green_Block_Visual'>
         <geometry>
           <box>
-            <size>0.1 0.8 0.5</size> <!-- Block size 1x1x1 meter -->
+            <size>0.2 0.6 0.5</size> 
           </box>
         </geometry>
         <material>
           <script>
             <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Grey</name> <!-- Change if you want a different material -->
+            <name>Gazebo/Green</name>
           </script>
           <ambient>0 1 0 1</ambient> <!-- Green color -->
         </material>

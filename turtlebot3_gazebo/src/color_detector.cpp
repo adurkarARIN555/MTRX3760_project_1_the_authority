@@ -49,5 +49,8 @@ void ColorDetector::image_callback(sensor_msgs::msg::Image::SharedPtr msg)
         double y_offset = green_centroid_.second - (image.rows / 2);
         publish_green_goal_position(x_offset, y_offset);
     }
+
+    // Debugging output for green_percentage
+    RCLCPP_INFO(this->get_logger(), "Green color percentage: %.2f%%", green_percentage);
 }
 

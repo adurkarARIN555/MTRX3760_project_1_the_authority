@@ -21,7 +21,7 @@ private:
   const double TURN_SPEED              = 1.5;
   const double TURN_SPEED_SLOW         = 0.6;
   const double GOAL_MET_THRESHOLD      = 91.0;
-  const double GOAL_DETECTED_THRESHOLD = 10.0;
+  const double GOAL_DETECTED_THRESHOLD = 5.0;
   const double NO_MOVEMENT             = 0.0;
   const double GOAL_CENTRING_POS       = 0.1;
   const double GOAL_TURN_SPEED         = 0.5;

@@ -6,15 +6,23 @@
 class ImageProcessor
 {
 public:
-    float calculate_green_percentage(const cv::Mat& image);
-    std::pair<double, double> find_green_centroid(const cv::Mat& image);
+    // Returns the percentage of green pixels in an image
+    float CalculateGreenPercentage(const cv::Mat& image);
+
+    // Returns the co-ordinates of the green pixels centroid in an image
+    std::pair<double, double> FindGreenCentroid(const cv::Mat& image);
 
 private:
     cv::Mat green_mask;
-    void get_green_mask(const cv::Mat& image);
+
+    // Creates a mask identifying green pixels in the image
+    void GetGreenMask(const cv::Mat& image);
     
-    cv::Scalar lower_green_ = cv::Scalar(35, 100, 100);
-    cv::Scalar upper_green_ = cv::Scalar(85, 255, 255);
+    // Lower bound for green color in HSV
+    cv::Scalar lower_green = cv::Scalar(35, 100, 100);
+
+    // Upper bound for green color in HSV
+    cv::Scalar upper_green = cv::Scalar(85, 255, 255);
 };
 
 #endif

@@ -16,19 +16,23 @@ public:
     ~ColorDetector();
 
 private:
-    void image_callback(sensor_msgs::msg::Image::SharedPtr msg);
-    void publish_green_goal_position(double x_offset, double y_offset);
+    // Callback for processing incoming images
+    void ImageCallback(sensor_msgs::msg::Image::SharedPtr msg);
+
+    // Publish the green object's position (centroid)
+    void PublishGreenGoalPosition(double x_offset, double y_offset);
 
     // ROS publishers and subscriptions
-    rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr green_percentage_pub_;
-    rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr green_goal_pos_pub_;
-    rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr subscription_;
+    rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr green_percentage_pub;
+    rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr green_goal_pos_pub;
+    rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr subscription;
 
     // Image processing utility
-    ImageProcessor image_processor_;
+    ImageProcessor image_processor;
 
+    // Green color detection results
     float green_percentage;
-    std::pair<double, double> green_centroid_;
+    std::pair<double, double> green_centroid;
 };
 
 #endif

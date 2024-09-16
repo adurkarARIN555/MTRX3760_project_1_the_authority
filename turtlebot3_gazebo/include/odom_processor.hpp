@@ -15,14 +15,19 @@ public:
   ~OdometryProcessor();
 
 private:
+  // Roll, pitch and yaw angle variables in radians
   double roll;
   double pitch;
   double yaw;
 
-  void odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg);
+  // Callback function to process odometry data
+  void OdomCallback(const nav_msgs::msg::Odometry::SharedPtr msg);
 
-  rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub_;
-  rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr robot_pose_pub_;
+  // Subscription to odometry messages
+  rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub;
+
+  // Publisher for robot pose (yaw) data
+  rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr robot_pose_pub;
 };
 
 #endif

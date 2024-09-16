@@ -1,11 +1,11 @@
 #include "robot_pose_processor.hpp"
 
-void RobotPoseProcessor::update_pose(const std_msgs::msg::Float64::SharedPtr& msg) 
+void RobotPoseProcessor::UpdatePose(const std_msgs::msg::Float64::SharedPtr& msg) 
 {
-  yaw_ = msg->data;
+  yaw = msg->data;
 }
 
-double RobotPoseProcessor::get_yaw() const 
+double RobotPoseProcessor::GetYaw() const 
 { 
-  return yaw_; 
+  return yaw; 
 }

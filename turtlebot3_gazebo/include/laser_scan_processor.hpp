@@ -8,16 +8,22 @@
 class LaserScanProcessor : public rclcpp::Node
 {
 public:
-  LaserScanProcessor();
+   LaserScanProcessor();
   ~LaserScanProcessor();
 
 private:
+  // Angles of interest in degrees for processing laser scan data
   uint16_t scan_angle[3] = {0, 30, 330};
-  void scan_callback(const sensor_msgs::msg::LaserScan::SharedPtr msg);
 
-  rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr scan_sub_;
-  rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr sensor_data_pub_;
+  // Callback function to process laser scan data
+  void ScanCallback(const sensor_msgs::msg::LaserScan::SharedPtr msg);
+
+  // ROS subscription for laser scan data
+  rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr scan_sub;
+
+  // ROS publisher for processed sensor data
+  rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr sensor_data_pub;
 };
 
-#endif  // LASER_SCAN_PROCESSOR_HPP_
+#endif
 

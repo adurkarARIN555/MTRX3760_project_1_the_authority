@@ -3,13 +3,17 @@
 
 #include <std_msgs/msg/float64.hpp>
 
-class RobotPoseProcessor {
+class RobotPoseProcessor 
+{
 public:
-  void update_pose(const std_msgs::msg::Float64::SharedPtr& msg);
-  double get_yaw() const;
+  // Updates the internal pose data with the incoming message
+  void UpdatePose(const std_msgs::msg::Float64::SharedPtr& msg);
+
+  // Returns the current yaw angle
+  double GetYaw() const;
 
 private:
-  double yaw_;
+  double yaw;
 };
 
 #endif

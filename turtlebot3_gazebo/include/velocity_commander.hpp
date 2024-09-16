@@ -3,17 +3,23 @@
 
 #include <geometry_msgs/msg/twist.hpp>
 
-class VelocityCommander {
+class VelocityCommander 
+{
 public:
+  // Constructor initialises default speeds
   VelocityCommander() : linear_speed(LINEAR_SPEED), angular_speed(NO_MOVEMENT) {}
-  geometry_msgs::msg::Twist generate_velocity_command(double front_dist, double left_dist, double right_dist, double green_percentage, double green_goal_x);
+
+  // Generates a velocity command based on various parameters
+  geometry_msgs::msg::Twist GenerateVelocityCommand(double front_dist, double left_dist, double right_dist, double green_percentage, double green_goal_x);
 
 private:
-  // Methods for different behaviors
-  void handle_green_detection(double green_goal_x, double& linear_speed, double& angular_speed);
-  void handle_wall_avoidance(double front_dist, double left_dist, double right_dist, double& linear_speed, double& angular_speed);
+  // Handles turtlebot behaviour when green is detected
+  void HandleGreenDetection(double green_goal_x, double& linear_speed, double& angular_speed);
 
-  // Constants
+  // Handles robot behaviour to avoid walls
+  void HandleWallAvoidance(double front_dist, double left_dist, double right_dist, double& linear_speed, double& angular_speed);
+
+  // Constants for linear and angular velocity adjustment
   const double DIST_THRESHOLD_FRONT    = 0.35;
   const double DIST_THRESHOLD_LEFT     = 0.35;
   const double DIST_THRESHOLD_RIGHT    = 0.35;
@@ -26,7 +32,10 @@ private:
   const double GOAL_CENTRING_POS       = 0.1;
   const double GOAL_TURN_SPEED         = 0.5;
 
+  // Current linear speed of the robot
   double linear_speed;
+
+  // Current angular speed of the robot
   double angular_speed;
 
 };

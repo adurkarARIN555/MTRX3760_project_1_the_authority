@@ -1,21 +1,21 @@
 #include "sensor_data_processor.hpp"
 
-void SensorDataProcessor::update_sensor_data(const std_msgs::msg::Float64MultiArray::SharedPtr& msg) 
+void SensorDataProcessor::UpdateSensorData(const std_msgs::msg::Float64MultiArray::SharedPtr& msg) 
 {
-  scan_data_[0] = msg->data[0]; // Front distance
-  scan_data_[1] = msg->data[1]; // Left distance
-  scan_data_[2] = msg->data[2]; // Right distance
+  scan_data[0] = msg->data[0]; // Front distance
+  scan_data[1] = msg->data[1]; // Left distance
+  scan_data[2] = msg->data[2]; // Right distance
 }
 
-double SensorDataProcessor::get_front_distance() const 
+double SensorDataProcessor::GetFrontDistance() const 
 { 
-  return scan_data_[0]; 
+  return scan_data[0]; 
 }
-double SensorDataProcessor::get_left_distance() const 
+double SensorDataProcessor::GetLeftDistance()  const 
 { 
-  return scan_data_[1]; 
+  return scan_data[1]; 
 }
-double SensorDataProcessor::get_right_distance() const 
+double SensorDataProcessor::GetRightDistance() const 
 { 
-  return scan_data_[2]; 
+  return scan_data[2]; 
 }

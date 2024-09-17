@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsensor_data_processor.a CMakeFiles/sensor_data_processor.dir/src/sensor_data_processor.cpp.o
+/usr/bin/ranlib libsensor_data_processor.a

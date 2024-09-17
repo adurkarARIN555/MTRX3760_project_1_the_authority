@@ -1,0 +1,2 @@
+/usr/bin/ar qc libodom_processor.a CMakeFiles/odom_processor.dir/src/odom_processor.cpp.o
+/usr/bin/ranlib libodom_processor.a

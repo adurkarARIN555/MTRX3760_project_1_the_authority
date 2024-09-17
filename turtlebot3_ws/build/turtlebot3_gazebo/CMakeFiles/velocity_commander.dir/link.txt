@@ -1,0 +1,2 @@
+/usr/bin/ar qc libvelocity_commander.a CMakeFiles/velocity_commander.dir/src/velocity_commander.cpp.o
+/usr/bin/ranlib libvelocity_commander.a

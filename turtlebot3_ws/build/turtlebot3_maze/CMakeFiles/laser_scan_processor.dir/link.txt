@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblaser_scan_processor.a CMakeFiles/laser_scan_processor.dir/src/laser_scan_processor.cpp.o
+/usr/bin/ranlib liblaser_scan_processor.a

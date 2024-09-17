@@ -1,0 +1,190 @@
+[0.009s] Invoking command in '/home/eashan/turtlebot3_ws/build/turtlebot3_maze': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/eashan/turtlebot3_ws/install/turtlebot3_teleop:/home/eashan/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/eashan/turtlebot3_ws/build/turtlebot3_maze -- -j22 -l22
+[0.080s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.214s] [33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[0.214s]   The package name passed to `find_package_handle_standard_args` (PkgConfig)
+[0.214s]   does not match the name of the calling package (gazebo).  This can lead to
+[0.214s]   problems in calling code that expects `find_package` result variables
+[0.214s]   (e.g., `_FOUND`) to follow a certain pattern.
+[0.214s] Call Stack (most recent call first):
+[0.214s]   /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake:99 (find_package_handle_standard_args)
+[0.214s]   /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:72 (include)
+[0.214s]   CMakeLists.txt:23 (find_package)
+[0.214s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.214s] [0m
+[0.248s] -- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+[0.281s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+[0.284s] -- Looking for ignition-math6 -- found version 6.15.1
+[0.293s] -- Searching for dependencies of ignition-math6
+[0.296s] -- Looking for OGRE...
+[0.303s] -- Found Ogre Ghadamon (1.9.0)
+[0.303s] -- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+[0.312s] -- Looking for OGRE_Paging...
+[0.312s] -- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+[0.312s] -- Looking for OGRE_Terrain...
+[0.312s] -- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+[0.312s] -- Looking for OGRE_Property...
+[0.312s] -- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+[0.312s] -- Looking for OGRE_RTShaderSystem...
+[0.313s] -- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+[0.313s] -- Looking for OGRE_Volume...
+[0.313s] -- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+[0.313s] -- Looking for OGRE_Overlay...
+[0.313s] -- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+[0.391s] -- Looking for ignition-math6 -- found version 6.15.1
+[0.391s] -- Looking for ignition-transport8 -- found version 8.2.1
+[0.392s] -- Searching for dependencies of ignition-transport8
+[0.405s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") 
+[0.420s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[0.426s] -- Checking for module 'libzmq >= 4'
+[0.445s] --   Found libzmq , version 4.3.4
+[0.492s] -- Checking for module 'uuid'
+[0.507s] --   Found uuid, version 2.37.2
+[0.542s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[0.543s] -- Searching for dependencies of ignition-msgs5
+[0.565s] -- Looking for ignition-math6 -- found version 6.15.1
+[0.572s] -- Checking for module 'tinyxml2'
+[0.587s] --   Found tinyxml2, version 9.0.0
+[0.622s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[0.623s] -- Looking for ignition-common3 -- found version 3.14.0
+[0.623s] -- Searching for dependencies of ignition-common3
+[0.624s] -- Looking for dlfcn.h - found
+[0.624s] -- Looking for libdl - found
+[0.639s] -- Searching for <ignition-common3> component [graphics]
+[0.640s] -- Looking for ignition-common3-graphics -- found version 3.14.0
+[0.640s] -- Searching for dependencies of ignition-common3-graphics
+[0.641s] -- Looking for ignition-math6 -- found version 6.15.1
+[0.643s] -- Looking for ignition-fuel_tools4 -- found version 4.4.0
+[0.643s] -- Searching for dependencies of ignition-fuel_tools4
+[0.689s] -- Checking for module 'jsoncpp'
+[0.705s] --   Found jsoncpp, version 1.9.5
+[0.748s] -- Checking for module 'libzip'
+[0.762s] --   Found libzip, version 1.7.3
+[0.796s] -- Looking for ignition-common3 -- found version 3.14.0
+[0.797s] -- Looking for ignition-math6 -- found version 6.15.1
+[0.797s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[0.801s] -- Found gazebo_ros_pkgs: 3.7.0 (/opt/ros/humble/share/gazebo_ros_pkgs/cmake)
+[0.801s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.836s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.839s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.851s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.866s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.878s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.909s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.921s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.948s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.950s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.051s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.089s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.102s] -- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)
+[1.106s] -- Found turtlebot3_msgs: 2.2.3 (/home/eashan/turtlebot3_ws/install/turtlebot3_msgs/share/turtlebot3_msgs/cmake)
+[1.136s] -- Found visualization_msgs: 4.2.4 (/opt/ros/humble/share/visualization_msgs/cmake)
+[1.151s] -- Found gazebo_msgs: 3.7.0 (/opt/ros/humble/share/gazebo_msgs/cmake)
+[1.179s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[1.312s] -- Configuring done
+[1.322s] [31mCMake Error at CMakeLists.txt:102 (add_executable):
+[1.322s]   Cannot find source file:
+[1.322s] 
+[1.322s]     src/laser_scan_processor_main.cpp
+[1.322s] 
+[1.322s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+[1.322s]   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+[1.322s] 
+[1.323s] [0m
+[1.323s] [31mCMake Error at CMakeLists.txt:106 (add_executable):
+[1.323s]   Cannot find source file:
+[1.323s] 
+[1.323s]     src/odom_processor_main.cpp
+[1.323s] 
+[1.323s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+[1.323s]   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+[1.323s] 
+[1.324s] [0m
+[1.324s] [31mCMake Error at CMakeLists.txt:110 (add_executable):
+[1.324s]   Cannot find source file:
+[1.324s] 
+[1.324s]     src/obstacle_avoidance_main.cpp
+[1.324s] 
+[1.324s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+[1.324s]   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+[1.324s] 
+[1.324s] [0m
+[1.324s] [31mCMake Error at CMakeLists.txt:114 (add_executable):
+[1.324s]   Cannot find source file:
+[1.324s] 
+[1.324s]     src/sensor_data_processor_main.cpp
+[1.324s] 
+[1.324s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+[1.325s]   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+[1.325s] 
+[1.325s] [0m
+[1.325s] [31mCMake Error at CMakeLists.txt:118 (add_executable):
+[1.325s]   Cannot find source file:
+[1.325s] 
+[1.325s]     src/robot_pose_processor_main.cpp
+[1.325s] 
+[1.325s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+[1.325s]   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+[1.325s] 
+[1.325s] [0m
+[1.325s] [31mCMake Error at CMakeLists.txt:122 (add_executable):
+[1.326s]   Cannot find source file:
+[1.326s] 
+[1.326s]     src/velocity_commander_main.cpp
+[1.326s] 
+[1.326s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+[1.326s]   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+[1.326s] 
+[1.326s] [0m
+[1.326s] [31mCMake Error at CMakeLists.txt:126 (add_executable):
+[1.326s]   Cannot find source file:
+[1.326s] 
+[1.326s]     src/color_detector_main.cpp
+[1.326s] 
+[1.326s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+[1.326s]   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+[1.326s] 
+[1.326s] [0m
+[1.326s] [31mCMake Error at CMakeLists.txt:130 (add_executable):
+[1.326s]   Cannot find source file:
+[1.326s] 
+[1.327s]     src/image_processor_main.cpp
+[1.327s] 
+[1.327s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+[1.327s]   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+[1.327s] 
+[1.327s] [0m
+[1.330s] [31mCMake Error at CMakeLists.txt:102 (add_executable):
+[1.330s]   No SOURCES given to target: laser_scan_processor_node
+[1.330s] 
+[1.330s] [0m
+[1.330s] [31mCMake Error at CMakeLists.txt:106 (add_executable):
+[1.331s]   No SOURCES given to target: odom_processor_node
+[1.331s] 
+[1.331s] [0m
+[1.331s] [31mCMake Error at CMakeLists.txt:110 (add_executable):
+[1.331s]   No SOURCES given to target: obstacle_avoidance_node
+[1.331s] 
+[1.331s] [0m
+[1.331s] [31mCMake Error at CMakeLists.txt:114 (add_executable):
+[1.331s]   No SOURCES given to target: sensor_data_processor_node
+[1.331s] 
+[1.331s] [0m
+[1.331s] [31mCMake Error at CMakeLists.txt:118 (add_executable):
+[1.331s]   No SOURCES given to target: robot_pose_processor_node
+[1.331s] 
+[1.331s] [0m
+[1.331s] [31mCMake Error at CMakeLists.txt:122 (add_executable):
+[1.331s]   No SOURCES given to target: velocity_commander_node
+[1.331s] 
+[1.331s] [0m
+[1.332s] [31mCMake Error at CMakeLists.txt:126 (add_executable):
+[1.332s]   No SOURCES given to target: color_detector_node
+[1.332s] 
+[1.332s] [0m
+[1.332s] [31mCMake Error at CMakeLists.txt:130 (add_executable):
+[1.332s]   No SOURCES given to target: image_processor_node
+[1.332s] 
+[1.332s] [0m
+[1.332s] [0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
+[1.337s] gmake: *** [Makefile:595: cmake_check_build_system] Error 1
+[1.340s] Invoked command in '/home/eashan/turtlebot3_ws/build/turtlebot3_maze' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/eashan/turtlebot3_ws/install/turtlebot3_teleop:/home/eashan/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/eashan/turtlebot3_ws/build/turtlebot3_maze -- -j22 -l22

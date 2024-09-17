@@ -1,0 +1,242 @@
+[0.000000] (-) TimerEvent: {}
+[0.000604] (turtlebot3_maze) JobQueued: {'identifier': 'turtlebot3_maze', 'dependencies': OrderedDict()}
+[0.000657] (turtlebot3_maze) JobStarted: {'identifier': 'turtlebot3_maze'}
+[0.006757] (turtlebot3_maze) JobProgress: {'identifier': 'turtlebot3_maze', 'progress': 'cmake'}
+[0.007251] (turtlebot3_maze) JobProgress: {'identifier': 'turtlebot3_maze', 'progress': 'build'}
+[0.007768] (turtlebot3_maze) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/eashan/turtlebot3_ws/build/turtlebot3_maze', '--', '-j22', '-l22'], 'cwd': '/home/eashan/turtlebot3_ws/build/turtlebot3_maze', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_AU:en'), ('USER', 'eashan'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/eashan/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/eashan/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/eashan/turtlebot3_ws/install/dynamixel_sdk/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/eashan'), ('OLDPWD', '/home/eashan'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1339'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/eashan/turtlebot3_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'eashan'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'eashan'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/eashan-XPS-13-9340:@/tmp/.ICE-unix/1311,unix/eashan-XPS-13-9340:/tmp/.ICE-unix/1311'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/91196f9a_880d_4a5e_b793_8b7554ebebb8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.006ZT2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.684'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/home/eashan/turtlebot3_ws/install/turtlebot3:/home/eashan/turtlebot3_ws/install/turtlebot3_teleop:/home/eashan/turtlebot3_ws/install/turtlebot3_simulations:/home/eashan/turtlebot3_ws/install/turtlebot3_bringup:/home/eashan/turtlebot3_ws/install/turtlebot3_node:/home/eashan/turtlebot3_ws/install/turtlebot3_navigation2:/home/eashan/turtlebot3_ws/install/turtlebot3_fake_node:/home/eashan/turtlebot3_ws/install/turtlebot3_example:/home/eashan/turtlebot3_ws/install/turtlebot3_msgs:/home/eashan/turtlebot3_ws/install/turtlebot3_maze:/home/eashan/turtlebot3_ws/install/turtlebot3_gazebo:/home/eashan/turtlebot3_ws/install/turtlebot3_description:/home/eashan/turtlebot3_ws/install/turtlebot3_cartographer:/home/eashan/turtlebot3_ws/install/dynamixel_sdk_examples:/home/eashan/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/eashan/turtlebot3_ws/install/dynamixel_sdk:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/eashan/turtlebot3_ws/build/turtlebot3_maze'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/eashan/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/eashan/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/eashan/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/eashan/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/eashan/turtlebot3_ws/install/turtlebot3:/home/eashan/turtlebot3_ws/install/turtlebot3_simulations:/home/eashan/turtlebot3_ws/install/turtlebot3_bringup:/home/eashan/turtlebot3_ws/install/turtlebot3_node:/home/eashan/turtlebot3_ws/install/turtlebot3_navigation2:/home/eashan/turtlebot3_ws/install/turtlebot3_fake_node:/home/eashan/turtlebot3_ws/install/turtlebot3_msgs:/home/eashan/turtlebot3_ws/install/turtlebot3_maze:/home/eashan/turtlebot3_ws/install/turtlebot3_gazebo:/home/eashan/turtlebot3_ws/install/turtlebot3_description:/home/eashan/turtlebot3_ws/install/turtlebot3_cartographer:/home/eashan/turtlebot3_ws/install/dynamixel_sdk_examples:/home/eashan/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/eashan/turtlebot3_ws/install/dynamixel_sdk:/home/eashan/turtlebot3_ws/install/turtlebot3_teleop:/home/eashan/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble')]), 'shell': False}
+[0.043723] (turtlebot3_maze) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099820] (-) TimerEvent: {}
+[0.164442] (turtlebot3_maze) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.164696] (turtlebot3_maze) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PkgConfig)\n'}
+[0.164786] (turtlebot3_maze) StderrLine: {'line': b'  does not match the name of the calling package (gazebo).  This can lead to\n'}
+[0.164861] (turtlebot3_maze) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.164934] (turtlebot3_maze) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.165006] (turtlebot3_maze) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.165084] (turtlebot3_maze) StderrLine: {'line': b'  /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake:99 (find_package_handle_standard_args)\n'}
+[0.165156] (turtlebot3_maze) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:72 (include)\n'}
+[0.165226] (turtlebot3_maze) StderrLine: {'line': b'  CMakeLists.txt:23 (find_package)\n'}
+[0.165295] (turtlebot3_maze) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.165365] (turtlebot3_maze) StderrLine: {'line': b'\x1b[0m\n'}
+[0.192581] (turtlebot3_maze) StdoutLine: {'line': b'-- Found DART: /usr/include (Required is at least version "6.6") found components: dart \n'}
+[0.199914] (-) TimerEvent: {}
+[0.229475] (turtlebot3_maze) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") \n'}
+[0.231044] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[0.236515] (turtlebot3_maze) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[0.238221] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for OGRE...\n'}
+[0.245443] (turtlebot3_maze) StdoutLine: {'line': b'-- Found Ogre Ghadamon (1.9.0)\n'}
+[0.245586] (turtlebot3_maze) StdoutLine: {'line': b'-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so\n'}
+[0.258628] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for OGRE_Paging...\n'}
+[0.258811] (turtlebot3_maze) StdoutLine: {'line': b'-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so\n'}
+[0.258909] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for OGRE_Terrain...\n'}
+[0.259132] (turtlebot3_maze) StdoutLine: {'line': b'-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so\n'}
+[0.259292] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for OGRE_Property...\n'}
+[0.259385] (turtlebot3_maze) StdoutLine: {'line': b'-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so\n'}
+[0.259478] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for OGRE_RTShaderSystem...\n'}
+[0.259600] (turtlebot3_maze) StdoutLine: {'line': b'-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so\n'}
+[0.259677] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for OGRE_Volume...\n'}
+[0.259750] (turtlebot3_maze) StdoutLine: {'line': b'-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so\n'}
+[0.259828] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for OGRE_Overlay...\n'}
+[0.259903] (turtlebot3_maze) StdoutLine: {'line': b'-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so\n'}
+[0.300004] (-) TimerEvent: {}
+[0.329661] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[0.330036] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-transport8 -- found version 8.2.1\n'}
+[0.330174] (turtlebot3_maze) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport8\n'}
+[0.341569] (turtlebot3_maze) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") \n'}
+[0.354101] (turtlebot3_maze) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[0.360122] (turtlebot3_maze) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[0.375365] (turtlebot3_maze) StdoutLine: {'line': b'--   Found libzmq , version 4.3.4\n'}
+[0.400107] (-) TimerEvent: {}
+[0.421638] (turtlebot3_maze) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[0.435947] (turtlebot3_maze) StdoutLine: {'line': b'--   Found uuid, version 2.37.2\n'}
+[0.468707] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[0.469144] (turtlebot3_maze) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs5\n'}
+[0.490811] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[0.496194] (turtlebot3_maze) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[0.500188] (-) TimerEvent: {}
+[0.509919] (turtlebot3_maze) StdoutLine: {'line': b'--   Found tinyxml2, version 9.0.0\n'}
+[0.543103] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[0.543543] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[0.544130] (turtlebot3_maze) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3\n'}
+[0.544247] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[0.544331] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[0.557885] (turtlebot3_maze) StdoutLine: {'line': b'-- Searching for <ignition-common3> component [graphics]\n'}
+[0.558369] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-common3-graphics -- found version 3.14.0\n'}
+[0.558957] (turtlebot3_maze) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3-graphics\n'}
+[0.559402] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[0.560603] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools4 -- found version 4.4.0\n'}
+[0.561235] (turtlebot3_maze) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools4\n'}
+[0.600306] (-) TimerEvent: {}
+[0.604355] (turtlebot3_maze) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[0.619216] (turtlebot3_maze) StdoutLine: {'line': b'--   Found jsoncpp, version 1.9.5\n'}
+[0.662517] (turtlebot3_maze) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[0.676729] (turtlebot3_maze) StdoutLine: {'line': b'--   Found libzip, version 1.7.3\n'}
+[0.700441] (-) TimerEvent: {}
+[0.710475] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[0.710894] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[0.711441] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[0.713547] (turtlebot3_maze) StdoutLine: {'line': b'-- Found gazebo_ros_pkgs: 3.7.0 (/opt/ros/humble/share/gazebo_ros_pkgs/cmake)\n'}
+[0.713826] (turtlebot3_maze) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.734822] (turtlebot3_maze) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.736695] (turtlebot3_maze) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.740217] (turtlebot3_maze) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.745295] (turtlebot3_maze) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.751931] (turtlebot3_maze) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.771232] (turtlebot3_maze) StdoutLine: {'line': b'-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[0.780060] (turtlebot3_maze) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.793699] (turtlebot3_maze) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.794640] (turtlebot3_maze) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.800568] (-) TimerEvent: {}
+[0.871207] (turtlebot3_maze) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.895631] (turtlebot3_maze) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.900643] (-) TimerEvent: {}
+[0.904521] (turtlebot3_maze) StdoutLine: {'line': b'-- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)\n'}
+[0.906619] (turtlebot3_maze) StdoutLine: {'line': b'-- Found turtlebot3_msgs: 2.2.3 (/home/eashan/turtlebot3_ws/install/turtlebot3_msgs/share/turtlebot3_msgs/cmake)\n'}
+[0.927790] (turtlebot3_maze) StdoutLine: {'line': b'-- Found visualization_msgs: 4.2.4 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[0.938301] (turtlebot3_maze) StdoutLine: {'line': b'-- Found gazebo_msgs: 3.7.0 (/opt/ros/humble/share/gazebo_msgs/cmake)\n'}
+[0.958050] (turtlebot3_maze) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[1.000745] (-) TimerEvent: {}
+[1.064337] (turtlebot3_maze) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.100858] (-) TimerEvent: {}
+[1.133091] (turtlebot3_maze) StdoutLine: {'line': b'-- Generating done\n'}
+[1.135005] (turtlebot3_maze) StdoutLine: {'line': b'-- Build files have been written to: /home/eashan/turtlebot3_ws/build/turtlebot3_maze\n'}
+[1.165996] (turtlebot3_maze) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target velocity_commander\x1b[0m\n'}
+[1.166946] (turtlebot3_maze) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target laser_scan_processor\x1b[0m\n'}
+[1.167091] (turtlebot3_maze) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_pose_processor\x1b[0m\n'}
+[1.167244] (turtlebot3_maze) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target image_processor\x1b[0m\n'}
+[1.167610] (turtlebot3_maze) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target obstacle_avoidance\x1b[0m\n'}
+[1.167750] (turtlebot3_maze) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target color_detector\x1b[0m\n'}
+[1.168554] (turtlebot3_maze) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target sensor_data_processor\x1b[0m\n'}
+[1.168759] (turtlebot3_maze) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target odom_processor\x1b[0m\n'}
+[1.179169] (turtlebot3_maze) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding CXX object CMakeFiles/sensor_data_processor.dir/src/sensor_data_processor.cpp.o\x1b[0m\n'}
+[1.180855] (turtlebot3_maze) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object CMakeFiles/velocity_commander.dir/src/velocity_commander.cpp.o\x1b[0m\n'}
+[1.181051] (turtlebot3_maze) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding CXX object CMakeFiles/robot_pose_processor.dir/src/robot_pose_processor.cpp.o\x1b[0m\n'}
+[1.182900] (turtlebot3_maze) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/image_processor.dir/src/image_processor.cpp.o\x1b[0m\n'}
+[1.192987] (turtlebot3_maze) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/color_detector.dir/src/color_detector.cpp.o\x1b[0m\n'}
+[1.193202] (turtlebot3_maze) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/obstacle_avoidance.dir/src/obstacle_avoidance.cpp.o\x1b[0m\n'}
+[1.193724] (turtlebot3_maze) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/odom_processor.dir/src/odom_processor.cpp.o\x1b[0m\n'}
+[1.195198] (turtlebot3_maze) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/laser_scan_processor.dir/src/laser_scan_processor.cpp.o\x1b[0m\n'}
+[1.200947] (-) TimerEvent: {}
+[1.301228] (-) TimerEvent: {}
+[1.401548] (-) TimerEvent: {}
+[1.501867] (-) TimerEvent: {}
+[1.595873] (turtlebot3_maze) StdoutLine: {'line': b'[ 28%] \x1b[32m\x1b[1mLinking CXX static library librobot_pose_processor.a\x1b[0m\n'}
+[1.601083] (turtlebot3_maze) StdoutLine: {'line': b'[ 31%] \x1b[32m\x1b[1mLinking CXX static library libsensor_data_processor.a\x1b[0m\n'}
+[1.601942] (-) TimerEvent: {}
+[1.608370] (turtlebot3_maze) StdoutLine: {'line': b'[ 34%] \x1b[32m\x1b[1mLinking CXX static library libvelocity_commander.a\x1b[0m\n'}
+[1.625279] (turtlebot3_maze) StdoutLine: {'line': b'[ 34%] Built target robot_pose_processor\n'}
+[1.631465] (turtlebot3_maze) StdoutLine: {'line': b'[ 34%] Built target sensor_data_processor\n'}
+[1.639427] (turtlebot3_maze) StdoutLine: {'line': b'[ 34%] Built target velocity_commander\n'}
+[1.647826] (turtlebot3_maze) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/robot_pose_processor_node.dir/src/robot_pose_processor.cpp.o\x1b[0m\n'}
+[1.653979] (turtlebot3_maze) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/sensor_data_processor_node.dir/src/sensor_data_processor.cpp.o\x1b[0m\n'}
+[1.659443] (turtlebot3_maze) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/velocity_commander_node.dir/src/velocity_commander.cpp.o\x1b[0m\n'}
+[1.702077] (-) TimerEvent: {}
+[1.802433] (-) TimerEvent: {}
+[1.902793] (-) TimerEvent: {}
+[1.920486] (turtlebot3_maze) StdoutLine: {'line': b'[ 46%] \x1b[32m\x1b[1mLinking CXX static library libimage_processor.a\x1b[0m\n'}
+[1.957560] (turtlebot3_maze) StdoutLine: {'line': b'[ 46%] Built target image_processor\n'}
+[1.985422] (turtlebot3_maze) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/image_processor_node.dir/src/image_processor.cpp.o\x1b[0m\n'}
+[1.989641] (turtlebot3_maze) StdoutLine: {'line': b'[ 53%] \x1b[32m\x1b[1mLinking CXX executable robot_pose_processor_node\x1b[0m\n'}
+[2.002905] (-) TimerEvent: {}
+[2.015987] (turtlebot3_maze) StdoutLine: {'line': b'[ 56%] \x1b[32m\x1b[1mLinking CXX executable velocity_commander_node\x1b[0m\n'}
+[2.103045] (-) TimerEvent: {}
+[2.162076] (turtlebot3_maze) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking CXX executable sensor_data_processor_node\x1b[0m\n'}
+[2.203148] (-) TimerEvent: {}
+[2.303481] (-) TimerEvent: {}
+[2.403809] (-) TimerEvent: {}
+[2.504131] (-) TimerEvent: {}
+[2.604457] (-) TimerEvent: {}
+[2.643514] (turtlebot3_maze) StdoutLine: {'line': b'[ 62%] \x1b[32m\x1b[1mLinking CXX executable image_processor_node\x1b[0m\n'}
+[2.704645] (-) TimerEvent: {}
+[2.765565] (turtlebot3_maze) StderrLine: {'line': b"/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':\n"}
+[2.765773] (turtlebot3_maze) StderrLine: {'line': b"(.text+0x1b): undefined reference to `main'\n"}
+[2.767779] (turtlebot3_maze) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[2.769950] (turtlebot3_maze) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/robot_pose_processor_node.dir/build.make:288: robot_pose_processor_node] Error 1\n'}
+[2.770292] (turtlebot3_maze) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:479: CMakeFiles/robot_pose_processor_node.dir/all] Error 2\n'}
+[2.770350] (turtlebot3_maze) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[2.804754] (-) TimerEvent: {}
+[2.808988] (turtlebot3_maze) StderrLine: {'line': b"/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':\n"}
+[2.809162] (turtlebot3_maze) StderrLine: {'line': b"(.text+0x1b): undefined reference to `main'\n"}
+[2.810458] (turtlebot3_maze) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[2.812393] (turtlebot3_maze) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/sensor_data_processor_node.dir/build.make:288: sensor_data_processor_node] Error 1\n'}
+[2.812548] (turtlebot3_maze) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:453: CMakeFiles/sensor_data_processor_node.dir/all] Error 2\n'}
+[2.813328] (turtlebot3_maze) StderrLine: {'line': b"/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':\n"}
+[2.813447] (turtlebot3_maze) StderrLine: {'line': b"(.text+0x1b): undefined reference to `main'\n"}
+[2.815209] (turtlebot3_maze) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[2.817362] (turtlebot3_maze) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/velocity_commander_node.dir/build.make:288: velocity_commander_node] Error 1\n'}
+[2.817554] (turtlebot3_maze) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:505: CMakeFiles/velocity_commander_node.dir/all] Error 2\n'}
+[2.904903] (-) TimerEvent: {}
+[3.005317] (-) TimerEvent: {}
+[3.105745] (-) TimerEvent: {}
+[3.206170] (-) TimerEvent: {}
+[3.257542] (turtlebot3_maze) StderrLine: {'line': b"/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':\n"}
+[3.257822] (turtlebot3_maze) StderrLine: {'line': b"(.text+0x1b): undefined reference to `main'\n"}
+[3.260601] (turtlebot3_maze) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[3.262828] (turtlebot3_maze) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/image_processor_node.dir/build.make:288: image_processor_node] Error 1\n'}
+[3.263242] (turtlebot3_maze) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:557: CMakeFiles/image_processor_node.dir/all] Error 2\n'}
+[3.306300] (-) TimerEvent: {}
+[3.406741] (-) TimerEvent: {}
+[3.507194] (-) TimerEvent: {}
+[3.607751] (-) TimerEvent: {}
+[3.708146] (-) TimerEvent: {}
+[3.808553] (-) TimerEvent: {}
+[3.909040] (-) TimerEvent: {}
+[4.009563] (-) TimerEvent: {}
+[4.110056] (-) TimerEvent: {}
+[4.210569] (-) TimerEvent: {}
+[4.311050] (-) TimerEvent: {}
+[4.411487] (-) TimerEvent: {}
+[4.511914] (-) TimerEvent: {}
+[4.612351] (-) TimerEvent: {}
+[4.712814] (-) TimerEvent: {}
+[4.813148] (-) TimerEvent: {}
+[4.913477] (-) TimerEvent: {}
+[5.013792] (-) TimerEvent: {}
+[5.114111] (-) TimerEvent: {}
+[5.214429] (-) TimerEvent: {}
+[5.314751] (-) TimerEvent: {}
+[5.415063] (-) TimerEvent: {}
+[5.515385] (-) TimerEvent: {}
+[5.615702] (-) TimerEvent: {}
+[5.716057] (-) TimerEvent: {}
+[5.816447] (-) TimerEvent: {}
+[5.916760] (-) TimerEvent: {}
+[6.017080] (-) TimerEvent: {}
+[6.117406] (-) TimerEvent: {}
+[6.217730] (-) TimerEvent: {}
+[6.318050] (-) TimerEvent: {}
+[6.418354] (-) TimerEvent: {}
+[6.518673] (-) TimerEvent: {}
+[6.618977] (-) TimerEvent: {}
+[6.719331] (-) TimerEvent: {}
+[6.819722] (-) TimerEvent: {}
+[6.920045] (-) TimerEvent: {}
+[7.020371] (-) TimerEvent: {}
+[7.044550] (turtlebot3_maze) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX static library liblaser_scan_processor.a\x1b[0m\n'}
+[7.056395] (turtlebot3_maze) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX static library libodom_processor.a\x1b[0m\n'}
+[7.120496] (-) TimerEvent: {}
+[7.162844] (turtlebot3_maze) StdoutLine: {'line': b'[ 68%] Built target laser_scan_processor\n'}
+[7.176858] (turtlebot3_maze) StdoutLine: {'line': b'[ 68%] Built target odom_processor\n'}
+[7.220570] (-) TimerEvent: {}
+[7.320840] (-) TimerEvent: {}
+[7.421143] (-) TimerEvent: {}
+[7.521444] (-) TimerEvent: {}
+[7.621760] (-) TimerEvent: {}
+[7.722072] (-) TimerEvent: {}
+[7.822381] (-) TimerEvent: {}
+[7.855187] (turtlebot3_maze) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX static library libcolor_detector.a\x1b[0m\n'}
+[7.922505] (-) TimerEvent: {}
+[8.017857] (turtlebot3_maze) StdoutLine: {'line': b'[ 71%] Built target color_detector\n'}
+[8.022568] (-) TimerEvent: {}
+[8.122822] (-) TimerEvent: {}
+[8.223185] (-) TimerEvent: {}
+[8.323594] (-) TimerEvent: {}
+[8.423947] (-) TimerEvent: {}
+[8.494359] (turtlebot3_maze) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX static library libobstacle_avoidance.a\x1b[0m\n'}
+[8.524087] (-) TimerEvent: {}
+[8.624597] (-) TimerEvent: {}
+[8.659393] (turtlebot3_maze) StdoutLine: {'line': b'[ 75%] Built target obstacle_avoidance\n'}
+[8.660526] (turtlebot3_maze) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[8.664734] (turtlebot3_maze) CommandEnded: {'returncode': 2}
+[8.723059] (turtlebot3_maze) JobEnded: {'identifier': 'turtlebot3_maze', 'rc': 2}
+[8.724514] (-) TimerEvent: {}
+[8.733498] (-) EventReactorShutdown: {}

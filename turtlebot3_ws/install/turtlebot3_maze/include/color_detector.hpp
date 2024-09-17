@@ -1,3 +1,16 @@
+// ********************************************************************************
+// include/color_detector.hpp
+//
+// This header file defines the ColorDetector class, a ROS 2 node that processes
+// incoming images to detect the presence of green objects. The node calculates
+// the percentage of green in the image and determines the position (centroid) of
+// the green object. This information is then published to ROS topics for further
+// use in controlling the TurtleBot3.
+//
+// Author Info: Eashan Garg, Arin Adurkar, Savith Karunanayaka, Joel Pivetta
+// Year: 2024
+// ********************************************************************************
+
 #ifndef COLOR_DETECTOR_HPP
 #define COLOR_DETECTOR_HPP
 
@@ -6,8 +19,6 @@
 #include <sensor_msgs/msg/image.hpp>
 #include <std_msgs/msg/float64.hpp>
 #include <std_msgs/msg/float64_multi_array.hpp>
-
-
 
 class ColorDetector : public rclcpp::Node
 {
@@ -34,5 +45,4 @@ private:
     float green_percentage;
     std::pair<double, double> green_centroid;
 };
-
 #endif

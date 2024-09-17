@@ -27,5 +27,4 @@ public:
 private:
   double yaw;
 };
-
 #endif

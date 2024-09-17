@@ -1,3 +1,16 @@
+// ********************************************************************************
+// include/image_processor.hpp
+//
+// This header file defines the ImageProcessor class, which provides utilities
+// for processing images to detect green color. The class calculates the percentage
+// of green pixels in an image and identifies the centroid of the detected green 
+// object. These methods are used by nodes, such as ColorDetector, to interpret 
+// camera data and assist with robot navigation.
+//
+// Author Info: Eashan Garg, Arin Adurkar, Savith Karunanayaka, Joel Pivetta
+// Year: 2024
+// ********************************************************************************
+
 #ifndef IMAGE_PROCESSOR_HPP
 #define IMAGE_PROCESSOR_HPP
 
@@ -24,5 +37,4 @@ private:
     // Upper bound for green color in HSV
     cv::Scalar upper_green = cv::Scalar(85, 255, 255);
 };
-
 #endif

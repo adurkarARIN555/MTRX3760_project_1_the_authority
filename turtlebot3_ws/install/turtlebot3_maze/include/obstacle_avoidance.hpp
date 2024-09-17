@@ -1,3 +1,16 @@
+// ********************************************************************************
+// include/obstacle_avoidance.hpp
+//
+// This header file defines the ObstacleAvoidance class, a ROS 2 node responsible for 
+// handling obstacle avoidance and navigation based on sensor data and the robot's 
+// pose. It subscribes to several topics to receive processed sensor data, robot yaw, 
+// green object detection, and green object position. Based on this data, it commands 
+// the robot's velocity to navigate through the environment.
+//
+// Author Info: Eashan Garg, Arin Adurkar, Savith Karunanayaka, Joel Pivetta
+// Year: 2024
+// ********************************************************************************
+
 #ifndef OBSTACLE_AVOIDANCE_HPP_
 #define OBSTACLE_AVOIDANCE_HPP_
 
@@ -43,5 +56,4 @@ private:
   RobotPoseProcessor  robot_pose_processor;
   VelocityCommander   velocity_commander;
 };
-
 #endif

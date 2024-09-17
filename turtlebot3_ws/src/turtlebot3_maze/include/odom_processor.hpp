@@ -41,5 +41,4 @@ private:
   // Publisher for robot pose (yaw) data
   rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr robot_pose_pub;
 };
-
 #endif

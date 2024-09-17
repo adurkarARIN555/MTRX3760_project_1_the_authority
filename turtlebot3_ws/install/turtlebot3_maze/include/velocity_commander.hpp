@@ -1,3 +1,15 @@
+// ********************************************************************************
+// include/velocity_commander.hpp
+//
+// This header file defines the VelocityCommander class, which is responsible for 
+// generating velocity commands for a robot based on sensor data and the detection 
+// of specific objects. The class provides methods to adjust the robot's linear and 
+// angular speeds for obstacle avoidance and goal-oriented behaviour.
+//
+// Author Info: Eashan Garg, Arin Adurkar, Savith Karunanayaka, Joel Pivetta
+// Year: 2024
+// ********************************************************************************
+
 #ifndef VELOCITY_COMMANDER_HPP_
 #define VELOCITY_COMMANDER_HPP_
 
@@ -10,14 +22,17 @@ public:
   VelocityCommander() : linear_speed(LINEAR_SPEED), angular_speed(NO_MOVEMENT) {}
 
   // Generates a velocity command based on various parameters
-  geometry_msgs::msg::Twist GenerateVelocityCommand(double front_dist, double left_dist, double right_dist, double green_percentage, double green_goal_x);
+  geometry_msgs::msg::Twist GenerateVelocityCommand(double front_dist, 
+  double left_dist, double right_dist, double green_percentage, double green_goal_x);
 
 private:
   // Handles turtlebot behaviour when green is detected
-  void HandleGreenDetection(double green_goal_x, double& linear_speed, double& angular_speed);
+  void HandleGreenDetection(double green_goal_x, 
+  double& linear_speed, double& angular_speed);
 
   // Handles robot behaviour to avoid walls
-  void HandleWallAvoidance(double front_dist, double left_dist, double right_dist, double& linear_speed, double& angular_speed);
+  void HandleWallAvoidance(double front_dist, double left_dist, 
+  double right_dist, double& linear_speed, double& angular_speed);
 
   // Constants for linear and angular velocity adjustment
   const double DIST_THRESHOLD_FRONT    = 0.35;
@@ -39,5 +54,4 @@ private:
   double angular_speed;
 
 };
-
 #endif

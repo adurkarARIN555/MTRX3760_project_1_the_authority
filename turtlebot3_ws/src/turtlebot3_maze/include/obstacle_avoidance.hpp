@@ -56,5 +56,4 @@ private:
   RobotPoseProcessor  robot_pose_processor;
   VelocityCommander   velocity_commander;
 };
-
 #endif

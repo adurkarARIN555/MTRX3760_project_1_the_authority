@@ -45,5 +45,4 @@ private:
     float green_percentage;
     std::pair<double, double> green_centroid;
 };
-
 #endif

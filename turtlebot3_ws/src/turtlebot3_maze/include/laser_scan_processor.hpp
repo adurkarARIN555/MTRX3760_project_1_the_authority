@@ -36,6 +36,4 @@ private:
   // ROS publisher for processed sensor data
   rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr sensor_data_pub;
 };
-
 #endif
-

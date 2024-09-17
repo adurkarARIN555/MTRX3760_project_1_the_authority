@@ -1,12 +1,11 @@
-/home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/main
-/home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/liblaser_scan_processor.a
-/home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/libodom_processor.a
-/home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/libobstacle_avoidance.a
 /home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/libsensor_data_processor.a
 /home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/librobot_pose_processor.a
 /home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/libvelocity_commander.a
-/home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/libcolor_detector.a
 /home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/libimage_processor.a
+/home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/laser_scan_processor_node
+/home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/odom_processor_node
+/home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/obstacle_avoidance_node
+/home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/color_detector_node
 /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//launch/turtlebot3_enclosedmaze.launch.py
 /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//launch/turtlebot3_opentrack.launch.py
 /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//launch/spawn_turtlebot3.launch.py

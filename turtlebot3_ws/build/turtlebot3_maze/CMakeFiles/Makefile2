@@ -63,15 +63,14 @@ CMAKE_BINARY_DIR = /home/eashan/turtlebot3_ws/build/turtlebot3_maze
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/laser_scan_processor.dir/all
-all: CMakeFiles/odom_processor.dir/all
-all: CMakeFiles/obstacle_avoidance.dir/all
 all: CMakeFiles/sensor_data_processor.dir/all
 all: CMakeFiles/robot_pose_processor.dir/all
 all: CMakeFiles/velocity_commander.dir/all
-all: CMakeFiles/color_detector.dir/all
 all: CMakeFiles/image_processor.dir/all
-all: CMakeFiles/main.dir/all
+all: CMakeFiles/laser_scan_processor_node.dir/all
+all: CMakeFiles/odom_processor_node.dir/all
+all: CMakeFiles/obstacle_avoidance_node.dir/all
+all: CMakeFiles/color_detector_node.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -81,15 +80,14 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/turtlebot3_maze_uninstall.dir/clean
-clean: CMakeFiles/laser_scan_processor.dir/clean
-clean: CMakeFiles/odom_processor.dir/clean
-clean: CMakeFiles/obstacle_avoidance.dir/clean
 clean: CMakeFiles/sensor_data_processor.dir/clean
 clean: CMakeFiles/robot_pose_processor.dir/clean
 clean: CMakeFiles/velocity_commander.dir/clean
-clean: CMakeFiles/color_detector.dir/clean
 clean: CMakeFiles/image_processor.dir/clean
-clean: CMakeFiles/main.dir/clean
+clean: CMakeFiles/laser_scan_processor_node.dir/clean
+clean: CMakeFiles/odom_processor_node.dir/clean
+clean: CMakeFiles/obstacle_avoidance_node.dir/clean
+clean: CMakeFiles/color_detector_node.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -145,91 +143,13 @@ CMakeFiles/turtlebot3_maze_uninstall.dir/clean:
 .PHONY : CMakeFiles/turtlebot3_maze_uninstall.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/laser_scan_processor.dir
-
-# All Build rule for target.
-CMakeFiles/laser_scan_processor.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laser_scan_processor.dir/build.make CMakeFiles/laser_scan_processor.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laser_scan_processor.dir/build.make CMakeFiles/laser_scan_processor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles --progress-num=5,6 "Built target laser_scan_processor"
-.PHONY : CMakeFiles/laser_scan_processor.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/laser_scan_processor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/laser_scan_processor.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles 0
-.PHONY : CMakeFiles/laser_scan_processor.dir/rule
-
-# Convenience name for target.
-laser_scan_processor: CMakeFiles/laser_scan_processor.dir/rule
-.PHONY : laser_scan_processor
-
-# clean rule for target.
-CMakeFiles/laser_scan_processor.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laser_scan_processor.dir/build.make CMakeFiles/laser_scan_processor.dir/clean
-.PHONY : CMakeFiles/laser_scan_processor.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/odom_processor.dir
-
-# All Build rule for target.
-CMakeFiles/odom_processor.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/odom_processor.dir/build.make CMakeFiles/odom_processor.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/odom_processor.dir/build.make CMakeFiles/odom_processor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles --progress-num=11,12 "Built target odom_processor"
-.PHONY : CMakeFiles/odom_processor.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/odom_processor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/odom_processor.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles 0
-.PHONY : CMakeFiles/odom_processor.dir/rule
-
-# Convenience name for target.
-odom_processor: CMakeFiles/odom_processor.dir/rule
-.PHONY : odom_processor
-
-# clean rule for target.
-CMakeFiles/odom_processor.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/odom_processor.dir/build.make CMakeFiles/odom_processor.dir/clean
-.PHONY : CMakeFiles/odom_processor.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/obstacle_avoidance.dir
-
-# All Build rule for target.
-CMakeFiles/obstacle_avoidance.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_avoidance.dir/build.make CMakeFiles/obstacle_avoidance.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_avoidance.dir/build.make CMakeFiles/obstacle_avoidance.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles --progress-num=9,10 "Built target obstacle_avoidance"
-.PHONY : CMakeFiles/obstacle_avoidance.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/obstacle_avoidance.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/obstacle_avoidance.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles 0
-.PHONY : CMakeFiles/obstacle_avoidance.dir/rule
-
-# Convenience name for target.
-obstacle_avoidance: CMakeFiles/obstacle_avoidance.dir/rule
-.PHONY : obstacle_avoidance
-
-# clean rule for target.
-CMakeFiles/obstacle_avoidance.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_avoidance.dir/build.make CMakeFiles/obstacle_avoidance.dir/clean
-.PHONY : CMakeFiles/obstacle_avoidance.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/sensor_data_processor.dir
 
 # All Build rule for target.
 CMakeFiles/sensor_data_processor.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_data_processor.dir/build.make CMakeFiles/sensor_data_processor.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_data_processor.dir/build.make CMakeFiles/sensor_data_processor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles --progress-num=15,16 "Built target sensor_data_processor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles --progress-num=13,14 "Built target sensor_data_processor"
 .PHONY : CMakeFiles/sensor_data_processor.dir/all
 
 # Build rule for subdir invocation for target.
@@ -255,7 +175,7 @@ CMakeFiles/sensor_data_processor.dir/clean:
 CMakeFiles/robot_pose_processor.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_pose_processor.dir/build.make CMakeFiles/robot_pose_processor.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_pose_processor.dir/build.make CMakeFiles/robot_pose_processor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles --progress-num=13,14 "Built target robot_pose_processor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles --progress-num=11,12 "Built target robot_pose_processor"
 .PHONY : CMakeFiles/robot_pose_processor.dir/all
 
 # Build rule for subdir invocation for target.
@@ -281,7 +201,7 @@ CMakeFiles/robot_pose_processor.dir/clean:
 CMakeFiles/velocity_commander.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/velocity_commander.dir/build.make CMakeFiles/velocity_commander.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/velocity_commander.dir/build.make CMakeFiles/velocity_commander.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles --progress-num=17,18 "Built target velocity_commander"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles --progress-num=15,16 "Built target velocity_commander"
 .PHONY : CMakeFiles/velocity_commander.dir/all
 
 # Build rule for subdir invocation for target.
@@ -299,32 +219,6 @@ velocity_commander: CMakeFiles/velocity_commander.dir/rule
 CMakeFiles/velocity_commander.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/velocity_commander.dir/build.make CMakeFiles/velocity_commander.dir/clean
 .PHONY : CMakeFiles/velocity_commander.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/color_detector.dir
-
-# All Build rule for target.
-CMakeFiles/color_detector.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detector.dir/build.make CMakeFiles/color_detector.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detector.dir/build.make CMakeFiles/color_detector.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles --progress-num=1,2 "Built target color_detector"
-.PHONY : CMakeFiles/color_detector.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/color_detector.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/color_detector.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles 0
-.PHONY : CMakeFiles/color_detector.dir/rule
-
-# Convenience name for target.
-color_detector: CMakeFiles/color_detector.dir/rule
-.PHONY : color_detector
-
-# clean rule for target.
-CMakeFiles/color_detector.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detector.dir/build.make CMakeFiles/color_detector.dir/clean
-.PHONY : CMakeFiles/color_detector.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/image_processor.dir
@@ -353,37 +247,111 @@ CMakeFiles/image_processor.dir/clean:
 .PHONY : CMakeFiles/image_processor.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/main.dir
+# Target rules for target CMakeFiles/laser_scan_processor_node.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all: CMakeFiles/laser_scan_processor.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/odom_processor.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/obstacle_avoidance.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/sensor_data_processor.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/robot_pose_processor.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/velocity_commander.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/color_detector.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/image_processor.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles --progress-num=7,8 "Built target main"
-.PHONY : CMakeFiles/main.dir/all
+CMakeFiles/laser_scan_processor_node.dir/all: CMakeFiles/sensor_data_processor.dir/all
+CMakeFiles/laser_scan_processor_node.dir/all: CMakeFiles/image_processor.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laser_scan_processor_node.dir/build.make CMakeFiles/laser_scan_processor_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laser_scan_processor_node.dir/build.make CMakeFiles/laser_scan_processor_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles --progress-num=5,6 "Built target laser_scan_processor_node"
+.PHONY : CMakeFiles/laser_scan_processor_node.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles 18
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
+CMakeFiles/laser_scan_processor_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/laser_scan_processor_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles 0
-.PHONY : CMakeFiles/main.dir/rule
+.PHONY : CMakeFiles/laser_scan_processor_node.dir/rule
 
 # Convenience name for target.
-main: CMakeFiles/main.dir/rule
-.PHONY : main
+laser_scan_processor_node: CMakeFiles/laser_scan_processor_node.dir/rule
+.PHONY : laser_scan_processor_node
 
 # clean rule for target.
-CMakeFiles/main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
-.PHONY : CMakeFiles/main.dir/clean
+CMakeFiles/laser_scan_processor_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laser_scan_processor_node.dir/build.make CMakeFiles/laser_scan_processor_node.dir/clean
+.PHONY : CMakeFiles/laser_scan_processor_node.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/odom_processor_node.dir
+
+# All Build rule for target.
+CMakeFiles/odom_processor_node.dir/all: CMakeFiles/robot_pose_processor.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/odom_processor_node.dir/build.make CMakeFiles/odom_processor_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/odom_processor_node.dir/build.make CMakeFiles/odom_processor_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles --progress-num=9,10 "Built target odom_processor_node"
+.PHONY : CMakeFiles/odom_processor_node.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/odom_processor_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/odom_processor_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles 0
+.PHONY : CMakeFiles/odom_processor_node.dir/rule
+
+# Convenience name for target.
+odom_processor_node: CMakeFiles/odom_processor_node.dir/rule
+.PHONY : odom_processor_node
+
+# clean rule for target.
+CMakeFiles/odom_processor_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/odom_processor_node.dir/build.make CMakeFiles/odom_processor_node.dir/clean
+.PHONY : CMakeFiles/odom_processor_node.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/obstacle_avoidance_node.dir
+
+# All Build rule for target.
+CMakeFiles/obstacle_avoidance_node.dir/all: CMakeFiles/sensor_data_processor.dir/all
+CMakeFiles/obstacle_avoidance_node.dir/all: CMakeFiles/robot_pose_processor.dir/all
+CMakeFiles/obstacle_avoidance_node.dir/all: CMakeFiles/velocity_commander.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_avoidance_node.dir/build.make CMakeFiles/obstacle_avoidance_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_avoidance_node.dir/build.make CMakeFiles/obstacle_avoidance_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles --progress-num=7,8 "Built target obstacle_avoidance_node"
+.PHONY : CMakeFiles/obstacle_avoidance_node.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/obstacle_avoidance_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/obstacle_avoidance_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles 0
+.PHONY : CMakeFiles/obstacle_avoidance_node.dir/rule
+
+# Convenience name for target.
+obstacle_avoidance_node: CMakeFiles/obstacle_avoidance_node.dir/rule
+.PHONY : obstacle_avoidance_node
+
+# clean rule for target.
+CMakeFiles/obstacle_avoidance_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_avoidance_node.dir/build.make CMakeFiles/obstacle_avoidance_node.dir/clean
+.PHONY : CMakeFiles/obstacle_avoidance_node.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/color_detector_node.dir
+
+# All Build rule for target.
+CMakeFiles/color_detector_node.dir/all: CMakeFiles/image_processor.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detector_node.dir/build.make CMakeFiles/color_detector_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detector_node.dir/build.make CMakeFiles/color_detector_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles --progress-num=1,2 "Built target color_detector_node"
+.PHONY : CMakeFiles/color_detector_node.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/color_detector_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/color_detector_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles 0
+.PHONY : CMakeFiles/color_detector_node.dir/rule
+
+# Convenience name for target.
+color_detector_node: CMakeFiles/color_detector_node.dir/rule
+.PHONY : color_detector_node
+
+# clean rule for target.
+CMakeFiles/color_detector_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detector_node.dir/build.make CMakeFiles/color_detector_node.dir/clean
+.PHONY : CMakeFiles/color_detector_node.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

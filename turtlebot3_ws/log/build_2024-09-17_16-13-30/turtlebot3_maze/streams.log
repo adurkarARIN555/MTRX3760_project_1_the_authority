@@ -1,0 +1,87 @@
+[0.011s] Invoking command in '/home/eashan/turtlebot3_ws/build/turtlebot3_maze': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/eashan/turtlebot3_ws/install/turtlebot3_teleop:/home/eashan/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/eashan/turtlebot3_ws/build/turtlebot3_maze -- -j22 -l22
+[0.075s] [ 12%] Built target velocity_commander
+[0.075s] [ 25%] Built target sensor_data_processor
+[0.076s] [ 37%] Built target robot_pose_processor
+[0.076s] [ 50%] Built target image_processor
+[0.105s] [ 62%] Built target obstacle_avoidance_node
+[0.105s] [100%] Built target odom_processor_node
+[0.105s] [100%] Built target color_detector_node
+[0.105s] [100%] Built target laser_scan_processor_node
+[0.117s] Invoked command in '/home/eashan/turtlebot3_ws/build/turtlebot3_maze' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/eashan/turtlebot3_ws/install/turtlebot3_teleop:/home/eashan/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/eashan/turtlebot3_ws/build/turtlebot3_maze -- -j22 -l22
+[0.171s] Invoking command in '/home/eashan/turtlebot3_ws/build/turtlebot3_maze': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/eashan/turtlebot3_ws/install/turtlebot3_teleop:/home/eashan/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/eashan/turtlebot3_ws/build/turtlebot3_maze
+[0.179s] -- Install configuration: ""
+[0.179s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/libsensor_data_processor.a
+[0.179s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/librobot_pose_processor.a
+[0.179s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/libvelocity_commander.a
+[0.179s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/libimage_processor.a
+[0.179s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/laser_scan_processor_node
+[0.179s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/odom_processor_node
+[0.179s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/obstacle_avoidance_node
+[0.180s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/lib/turtlebot3_maze/color_detector_node
+[0.180s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//launch
+[0.180s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//launch/turtlebot3_enclosedmaze.launch.py
+[0.180s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//launch/turtlebot3_opentrack.launch.py
+[0.180s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//launch/spawn_turtlebot3.launch.py
+[0.180s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//launch/robot_state_publisher.launch.py
+[0.180s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//launch/turtlebot3_floatingmaze.launch.py
+[0.180s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//launch/turtlebot3_launch.py
+[0.180s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models
+[0.180s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_enclosedmaze
+[0.180s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_enclosedmaze/model.config
+[0.180s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_enclosedmaze/model.sdf
+[0.180s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_burger
+[0.181s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_burger/model-1_4.sdf
+[0.181s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_burger/model.config
+[0.181s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_burger/model.sdf
+[0.181s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_common
+[0.181s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_common/model.config
+[0.181s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_common/meshes
+[0.181s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_common/meshes/tire.dae
+[0.181s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_common/meshes/burger_base.dae
+[0.181s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_common/meshes/waffle_pi_base.dae
+[0.181s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_common/meshes/waffle_base.dae
+[0.181s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_common/meshes/lds.dae
+[0.181s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_common/meshes/r200.dae
+[0.182s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_opentrack
+[0.182s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_opentrack/model.config
+[0.182s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//models/turtlebot3_opentrack/model.sdf
+[0.182s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//rviz
+[0.182s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//rviz/tb3_gazebo.rviz
+[0.182s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//urdf
+[0.182s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//urdf/common_properties.urdf
+[0.182s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//urdf/turtlebot3_burger.urdf
+[0.182s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//worlds
+[0.182s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//worlds/turtlebot3_opentrack.world
+[0.182s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//worlds/turtlebot3_enclosedmaze.world
+[0.182s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze//worlds/turtlebot3_floatingmaze.world
+[0.182s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/include/
+[0.182s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/include//image_processor.hpp
+[0.182s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/include//.vscode
+[0.183s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/include//.vscode/settings.json
+[0.183s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/include//.vscode/c_cpp_properties.json
+[0.183s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/include//.vscode/launch.json
+[0.183s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/include//laser_scan_processor.hpp
+[0.183s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/include//odom_processor.hpp
+[0.183s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/include//obstacle_avoidance.hpp
+[0.183s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/include//velocity_commander.hpp
+[0.183s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/include//robot_pose_processor.hpp
+[0.183s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/include//color_detector.hpp
+[0.183s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/include//sensor_data_processor.hpp
+[0.183s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/ament_index/resource_index/package_run_dependencies/turtlebot3_maze
+[0.183s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/ament_index/resource_index/parent_prefix_path/turtlebot3_maze
+[0.183s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze/environment/ament_prefix_path.sh
+[0.184s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze/environment/ament_prefix_path.dsv
+[0.184s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze/environment/path.sh
+[0.184s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze/environment/path.dsv
+[0.184s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze/local_setup.bash
+[0.184s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze/local_setup.sh
+[0.184s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze/local_setup.zsh
+[0.184s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze/local_setup.dsv
+[0.184s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze/package.dsv
+[0.184s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/ament_index/resource_index/packages/turtlebot3_maze
+[0.184s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.184s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.184s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze/cmake/turtlebot3_mazeConfig.cmake
+[0.184s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze/cmake/turtlebot3_mazeConfig-version.cmake
+[0.184s] -- Up-to-date: /home/eashan/turtlebot3_ws/install/turtlebot3_maze/share/turtlebot3_maze/package.xml
+[0.185s] Invoked command in '/home/eashan/turtlebot3_ws/build/turtlebot3_maze' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/eashan/turtlebot3_ws/install/turtlebot3_teleop:/home/eashan/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/eashan/turtlebot3_ws/build/turtlebot3_maze

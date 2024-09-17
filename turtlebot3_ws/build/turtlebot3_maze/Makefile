@@ -198,45 +198,6 @@ turtlebot3_maze_uninstall/fast:
 .PHONY : turtlebot3_maze_uninstall/fast
 
 #=============================================================================
-# Target rules for targets named laser_scan_processor
-
-# Build rule for target.
-laser_scan_processor: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 laser_scan_processor
-.PHONY : laser_scan_processor
-
-# fast build rule for target.
-laser_scan_processor/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laser_scan_processor.dir/build.make CMakeFiles/laser_scan_processor.dir/build
-.PHONY : laser_scan_processor/fast
-
-#=============================================================================
-# Target rules for targets named odom_processor
-
-# Build rule for target.
-odom_processor: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 odom_processor
-.PHONY : odom_processor
-
-# fast build rule for target.
-odom_processor/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/odom_processor.dir/build.make CMakeFiles/odom_processor.dir/build
-.PHONY : odom_processor/fast
-
-#=============================================================================
-# Target rules for targets named obstacle_avoidance
-
-# Build rule for target.
-obstacle_avoidance: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 obstacle_avoidance
-.PHONY : obstacle_avoidance
-
-# fast build rule for target.
-obstacle_avoidance/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_avoidance.dir/build.make CMakeFiles/obstacle_avoidance.dir/build
-.PHONY : obstacle_avoidance/fast
-
-#=============================================================================
 # Target rules for targets named sensor_data_processor
 
 # Build rule for target.
@@ -276,19 +237,6 @@ velocity_commander/fast:
 .PHONY : velocity_commander/fast
 
 #=============================================================================
-# Target rules for targets named color_detector
-
-# Build rule for target.
-color_detector: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 color_detector
-.PHONY : color_detector
-
-# fast build rule for target.
-color_detector/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detector.dir/build.make CMakeFiles/color_detector.dir/build
-.PHONY : color_detector/fast
-
-#=============================================================================
 # Target rules for targets named image_processor
 
 # Build rule for target.
@@ -302,24 +250,63 @@ image_processor/fast:
 .PHONY : image_processor/fast
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named laser_scan_processor_node
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+laser_scan_processor_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 laser_scan_processor_node
+.PHONY : laser_scan_processor_node
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+laser_scan_processor_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laser_scan_processor_node.dir/build.make CMakeFiles/laser_scan_processor_node.dir/build
+.PHONY : laser_scan_processor_node/fast
+
+#=============================================================================
+# Target rules for targets named odom_processor_node
+
+# Build rule for target.
+odom_processor_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 odom_processor_node
+.PHONY : odom_processor_node
+
+# fast build rule for target.
+odom_processor_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/odom_processor_node.dir/build.make CMakeFiles/odom_processor_node.dir/build
+.PHONY : odom_processor_node/fast
+
+#=============================================================================
+# Target rules for targets named obstacle_avoidance_node
+
+# Build rule for target.
+obstacle_avoidance_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 obstacle_avoidance_node
+.PHONY : obstacle_avoidance_node
+
+# fast build rule for target.
+obstacle_avoidance_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_avoidance_node.dir/build.make CMakeFiles/obstacle_avoidance_node.dir/build
+.PHONY : obstacle_avoidance_node/fast
+
+#=============================================================================
+# Target rules for targets named color_detector_node
+
+# Build rule for target.
+color_detector_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 color_detector_node
+.PHONY : color_detector_node
+
+# fast build rule for target.
+color_detector_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detector_node.dir/build.make CMakeFiles/color_detector_node.dir/build
+.PHONY : color_detector_node/fast
 
 src/color_detector.o: src/color_detector.cpp.o
 .PHONY : src/color_detector.o
 
 # target to build an object file
 src/color_detector.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detector.dir/build.make CMakeFiles/color_detector.dir/src/color_detector.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detector_node.dir/build.make CMakeFiles/color_detector_node.dir/src/color_detector.cpp.o
 .PHONY : src/color_detector.cpp.o
 
 src/color_detector.i: src/color_detector.cpp.i
@@ -327,7 +314,7 @@ src/color_detector.i: src/color_detector.cpp.i
 
 # target to preprocess a source file
 src/color_detector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detector.dir/build.make CMakeFiles/color_detector.dir/src/color_detector.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detector_node.dir/build.make CMakeFiles/color_detector_node.dir/src/color_detector.cpp.i
 .PHONY : src/color_detector.cpp.i
 
 src/color_detector.s: src/color_detector.cpp.s
@@ -335,7 +322,7 @@ src/color_detector.s: src/color_detector.cpp.s
 
 # target to generate assembly for a file
 src/color_detector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detector.dir/build.make CMakeFiles/color_detector.dir/src/color_detector.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detector_node.dir/build.make CMakeFiles/color_detector_node.dir/src/color_detector.cpp.s
 .PHONY : src/color_detector.cpp.s
 
 src/image_processor.o: src/image_processor.cpp.o
@@ -367,7 +354,7 @@ src/laser_scan_processor.o: src/laser_scan_processor.cpp.o
 
 # target to build an object file
 src/laser_scan_processor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laser_scan_processor.dir/build.make CMakeFiles/laser_scan_processor.dir/src/laser_scan_processor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laser_scan_processor_node.dir/build.make CMakeFiles/laser_scan_processor_node.dir/src/laser_scan_processor.cpp.o
 .PHONY : src/laser_scan_processor.cpp.o
 
 src/laser_scan_processor.i: src/laser_scan_processor.cpp.i
@@ -375,7 +362,7 @@ src/laser_scan_processor.i: src/laser_scan_processor.cpp.i
 
 # target to preprocess a source file
 src/laser_scan_processor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laser_scan_processor.dir/build.make CMakeFiles/laser_scan_processor.dir/src/laser_scan_processor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laser_scan_processor_node.dir/build.make CMakeFiles/laser_scan_processor_node.dir/src/laser_scan_processor.cpp.i
 .PHONY : src/laser_scan_processor.cpp.i
 
 src/laser_scan_processor.s: src/laser_scan_processor.cpp.s
@@ -383,39 +370,15 @@ src/laser_scan_processor.s: src/laser_scan_processor.cpp.s
 
 # target to generate assembly for a file
 src/laser_scan_processor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laser_scan_processor.dir/build.make CMakeFiles/laser_scan_processor.dir/src/laser_scan_processor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laser_scan_processor_node.dir/build.make CMakeFiles/laser_scan_processor_node.dir/src/laser_scan_processor.cpp.s
 .PHONY : src/laser_scan_processor.cpp.s
-
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
-
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
 
 src/obstacle_avoidance.o: src/obstacle_avoidance.cpp.o
 .PHONY : src/obstacle_avoidance.o
 
 # target to build an object file
 src/obstacle_avoidance.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_avoidance.dir/build.make CMakeFiles/obstacle_avoidance.dir/src/obstacle_avoidance.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_avoidance_node.dir/build.make CMakeFiles/obstacle_avoidance_node.dir/src/obstacle_avoidance.cpp.o
 .PHONY : src/obstacle_avoidance.cpp.o
 
 src/obstacle_avoidance.i: src/obstacle_avoidance.cpp.i
@@ -423,7 +386,7 @@ src/obstacle_avoidance.i: src/obstacle_avoidance.cpp.i
 
 # target to preprocess a source file
 src/obstacle_avoidance.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_avoidance.dir/build.make CMakeFiles/obstacle_avoidance.dir/src/obstacle_avoidance.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_avoidance_node.dir/build.make CMakeFiles/obstacle_avoidance_node.dir/src/obstacle_avoidance.cpp.i
 .PHONY : src/obstacle_avoidance.cpp.i
 
 src/obstacle_avoidance.s: src/obstacle_avoidance.cpp.s
@@ -431,7 +394,7 @@ src/obstacle_avoidance.s: src/obstacle_avoidance.cpp.s
 
 # target to generate assembly for a file
 src/obstacle_avoidance.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_avoidance.dir/build.make CMakeFiles/obstacle_avoidance.dir/src/obstacle_avoidance.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_avoidance_node.dir/build.make CMakeFiles/obstacle_avoidance_node.dir/src/obstacle_avoidance.cpp.s
 .PHONY : src/obstacle_avoidance.cpp.s
 
 src/odom_processor.o: src/odom_processor.cpp.o
@@ -439,7 +402,7 @@ src/odom_processor.o: src/odom_processor.cpp.o
 
 # target to build an object file
 src/odom_processor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/odom_processor.dir/build.make CMakeFiles/odom_processor.dir/src/odom_processor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/odom_processor_node.dir/build.make CMakeFiles/odom_processor_node.dir/src/odom_processor.cpp.o
 .PHONY : src/odom_processor.cpp.o
 
 src/odom_processor.i: src/odom_processor.cpp.i
@@ -447,7 +410,7 @@ src/odom_processor.i: src/odom_processor.cpp.i
 
 # target to preprocess a source file
 src/odom_processor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/odom_processor.dir/build.make CMakeFiles/odom_processor.dir/src/odom_processor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/odom_processor_node.dir/build.make CMakeFiles/odom_processor_node.dir/src/odom_processor.cpp.i
 .PHONY : src/odom_processor.cpp.i
 
 src/odom_processor.s: src/odom_processor.cpp.s
@@ -455,7 +418,7 @@ src/odom_processor.s: src/odom_processor.cpp.s
 
 # target to generate assembly for a file
 src/odom_processor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/odom_processor.dir/build.make CMakeFiles/odom_processor.dir/src/odom_processor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/odom_processor_node.dir/build.make CMakeFiles/odom_processor_node.dir/src/odom_processor.cpp.s
 .PHONY : src/odom_processor.cpp.s
 
 src/robot_pose_processor.o: src/robot_pose_processor.cpp.o
@@ -545,12 +508,11 @@ help:
 	@echo "... test"
 	@echo "... turtlebot3_maze_uninstall"
 	@echo "... uninstall"
-	@echo "... color_detector"
+	@echo "... color_detector_node"
 	@echo "... image_processor"
-	@echo "... laser_scan_processor"
-	@echo "... main"
-	@echo "... obstacle_avoidance"
-	@echo "... odom_processor"
+	@echo "... laser_scan_processor_node"
+	@echo "... obstacle_avoidance_node"
+	@echo "... odom_processor_node"
 	@echo "... robot_pose_processor"
 	@echo "... sensor_data_processor"
 	@echo "... velocity_commander"
@@ -563,9 +525,6 @@ help:
 	@echo "... src/laser_scan_processor.o"
 	@echo "... src/laser_scan_processor.i"
 	@echo "... src/laser_scan_processor.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
 	@echo "... src/obstacle_avoidance.o"
 	@echo "... src/obstacle_avoidance.i"
 	@echo "... src/obstacle_avoidance.s"

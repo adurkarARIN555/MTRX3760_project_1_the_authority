@@ -6,7 +6,8 @@
 
 #include "velocity_commander.hpp"
 
-geometry_msgs::msg::Twist VelocityCommander::GenerateVelocityCommand(double front_dist, double left_dist, double right_dist, double green_percentage, double green_goal_x) 
+geometry_msgs::msg::Twist VelocityCommander::GenerateVelocityCommand(double front_dist, 
+double left_dist, double right_dist, double green_percentage, double green_goal_x) 
 {
     if (green_percentage >= GOAL_MET_THRESHOLD) 
     {
@@ -16,13 +17,15 @@ geometry_msgs::msg::Twist VelocityCommander::GenerateVelocityCommand(double fron
     } 
     else if (green_percentage >= GOAL_DETECTED_THRESHOLD) 
     {
-        // Handle movement towards the green goal if the green color percentage is above detection threshold
+        // Handle movement towards the green goal if the green 
+        // Color percentage is above detection threshold
         HandleGreenDetection(green_goal_x, linear_speed, angular_speed);
     } 
     else 
     {
         // Handle obstacle avoidance when no significant green detection
-        HandleWallAvoidance(front_dist, left_dist, right_dist, linear_speed, angular_speed);
+        HandleWallAvoidance(front_dist, left_dist, right_dist, 
+        linear_speed, angular_speed);
     }
 
     // Create and return a twist message with the calculated velocities
@@ -32,7 +35,8 @@ geometry_msgs::msg::Twist VelocityCommander::GenerateVelocityCommand(double fron
     return cmd_vel;
 }
 
-void VelocityCommander::HandleGreenDetection(double green_goal_x, double& linear_speed, double& angular_speed)
+void VelocityCommander::HandleGreenDetection(double green_goal_x, 
+double& linear_speed, double& angular_speed)
 {
     if (green_goal_x > GOAL_CENTRING_POS) 
     {
@@ -48,7 +52,8 @@ void VelocityCommander::HandleGreenDetection(double green_goal_x, double& linear
     linear_speed = LINEAR_SPEED;
 }
 
-void VelocityCommander::HandleWallAvoidance(double front_dist, double left_dist, double right_dist, double& linear_speed, double& angular_speed)
+void VelocityCommander::HandleWallAvoidance(double front_dist, double left_dist, 
+double right_dist, double& linear_speed, double& angular_speed)
 {
     if (left_dist < DIST_THRESHOLD_LEFT && front_dist < DIST_THRESHOLD_FRONT) 
     {

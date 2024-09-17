@@ -37,5 +37,4 @@ private:
     // Upper bound for green color in HSV
     cv::Scalar upper_green = cv::Scalar(85, 255, 255);
 };
-
 #endif

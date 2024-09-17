@@ -30,5 +30,4 @@ private:
   // Array stores distances from front, left, and right sensors
   double scan_data[3];
 };
-
 #endif

@@ -1,3 +1,15 @@
+// ********************************************************************************
+// include/odometry_processor.hpp
+//
+// This header file defines the OdometryProcessor class, a ROS 2 node responsible for 
+// processing odometry data to determine the robot's orientation (roll, pitch, and yaw).
+// It subscribes to odometry messages, extracts the orientation, and publishes the yaw
+// angle, which can be used for navigation and control purposes.
+//
+// Author Info: Eashan Garg, Arin Adurkar, Savith Karunanayaka, Joel Pivetta
+// Year: 2024
+// ********************************************************************************
+
 #ifndef ODOM_PROCESSOR_HPP_
 #define ODOM_PROCESSOR_HPP_
 
@@ -29,5 +41,4 @@ private:
   // Publisher for robot pose (yaw) data
   rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr robot_pose_pub;
 };
-
 #endif

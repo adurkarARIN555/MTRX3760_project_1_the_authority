@@ -1,0 +1,31 @@
+[33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args` (PkgConfig)
+  does not match the name of the calling package (gazebo).  This can lead to
+  problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake:99 (find_package_handle_standard_args)
+  /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:72 (include)
+  CMakeLists.txt:23 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+/usr/bin/ld: CMakeFiles/color_detector_node.dir/src/color_detector.cpp.o: in function `ColorDetector::ImageCallback(std::shared_ptr<sensor_msgs::msg::Image_<std::allocator<void> > >)':
+color_detector.cpp:(.text+0xcba): undefined reference to `ImageProcessor::CalculateGreenPercentage(cv::Mat const&)'
+/usr/bin/ld: color_detector.cpp:(.text+0xd41): undefined reference to `ImageProcessor::FindGreenCentroid(cv::Mat const&)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/color_detector_node.dir/build.make:287: color_detector_node] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:333: CMakeFiles/color_detector_node.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+/usr/bin/ld: CMakeFiles/obstacle_avoidance_node.dir/src/obstacle_avoidance.cpp.o: in function `ObstacleAvoidance::SensorDataCallback(std::shared_ptr<std_msgs::msg::Float64MultiArray_<std::allocator<void> > >)':
+obstacle_avoidance.cpp:(.text+0xfe8): undefined reference to `SensorDataProcessor::UpdateSensorData(std::shared_ptr<std_msgs::msg::Float64MultiArray_<std::allocator<void> > > const&)'
+/usr/bin/ld: CMakeFiles/obstacle_avoidance_node.dir/src/obstacle_avoidance.cpp.o: in function `ObstacleAvoidance::RobotPoseCallback(std::shared_ptr<std_msgs::msg::Float64_<std::allocator<void> > >)':
+obstacle_avoidance.cpp:(.text+0x1029): undefined reference to `RobotPoseProcessor::UpdatePose(std::shared_ptr<std_msgs::msg::Float64_<std::allocator<void> > > const&)'
+/usr/bin/ld: obstacle_avoidance.cpp:(.text+0x103b): undefined reference to `RobotPoseProcessor::GetYaw() const'
+/usr/bin/ld: obstacle_avoidance.cpp:(.text+0x105d): undefined reference to `SensorDataProcessor::GetFrontDistance() const'
+/usr/bin/ld: obstacle_avoidance.cpp:(.text+0x1078): undefined reference to `SensorDataProcessor::GetLeftDistance() const'
+/usr/bin/ld: obstacle_avoidance.cpp:(.text+0x1093): undefined reference to `SensorDataProcessor::GetRightDistance() const'
+/usr/bin/ld: obstacle_avoidance.cpp:(.text+0x10f1): undefined reference to `VelocityCommander::GenerateVelocityCommand(double, double, double, double, double)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/obstacle_avoidance_node.dir/build.make:287: obstacle_avoidance_node] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:307: CMakeFiles/obstacle_avoidance_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

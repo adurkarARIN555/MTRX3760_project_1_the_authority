@@ -10,13 +10,16 @@ ColorDetector::ColorDetector() : Node("color_detector")
 {
     // Create a subscription to the "camera/image_raw" topic with a queue size of 10
     subscription = this->create_subscription<sensor_msgs::msg::Image>(
-    "camera/image_raw", 10, std::bind(&ColorDetector::ImageCallback, this, std::placeholders::_1));
+    "camera/image_raw", 10, std::bind(&ColorDetector::ImageCallback,
+    this, std::placeholders::_1));
 
     // Create a publisher for green color percentage with a queue size of 10
-    green_percentage_pub = this->create_publisher<std_msgs::msg::Float64>("green_color_percentage", 10);
+    green_percentage_pub = this->create_publisher<std_msgs::msg::Float64>(
+    "green_color_percentage", 10);
 
     // Create a publisher for green goal position with a QOS profile
-    green_goal_pos_pub = this->create_publisher<std_msgs::msg::Float64MultiArray>("green_goal_position", rclcpp::QoS(10));
+    green_goal_pos_pub = this->create_publisher<std_msgs::msg::Float64MultiArray>(
+    "green_goal_position", rclcpp::QoS(10));
 
     RCLCPP_INFO(this->get_logger(), "Color detector node has been initialised");
 }
@@ -38,7 +41,8 @@ void ColorDetector::PublishGreenGoalPosition(double x_offset, double y_offset)
 void ColorDetector::ImageCallback(sensor_msgs::msg::Image::SharedPtr msg)
 {
     // Convert ROS image message to OpenCV image
-    cv_bridge::CvImagePtr cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
+    cv_bridge::CvImagePtr cv_ptr = cv_bridge::toCvCopy(msg,
+    sensor_msgs::image_encodings::BGR8);
     cv::Mat image = cv_ptr->image;
 
     // Use the ImageProcessor instance to calculate the green percentage
@@ -61,6 +65,19 @@ void ColorDetector::ImageCallback(sensor_msgs::msg::Image::SharedPtr msg)
     }
 
     // Debugging output for green_percentage
-    // RCLCPP_INFO(this->get_logger(), "Green color percentage: %.2f%%", green_percentage);
+    // RCLCPP_INFO(this->get_logger(), "Green color percentage: %.2f%%", 
+    // green_percentage);
+}
+
+// ********************************************************************
+// *                          Main Function                           *
+// ********************************************************************
+int main(int argc, char ** argv)
+{
+  rclcpp::init(argc, argv);
+  rclcpp::spin(std::make_shared<ColorDetector>());
+  rclcpp::shutdown();
+
+  return 0;
 }
 

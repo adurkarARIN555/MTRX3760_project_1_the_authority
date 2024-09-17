@@ -1,0 +1,148 @@
+[0.009s] Invoking command in '/home/eashan/turtlebot3_ws/build/turtlebot3_maze': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/eashan/turtlebot3_ws/install/turtlebot3_teleop:/home/eashan/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/eashan/turtlebot3_ws/build/turtlebot3_maze -- -j22 -l22
+[0.043s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.164s] [33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[0.164s]   The package name passed to `find_package_handle_standard_args` (PkgConfig)
+[0.164s]   does not match the name of the calling package (gazebo).  This can lead to
+[0.164s]   problems in calling code that expects `find_package` result variables
+[0.164s]   (e.g., `_FOUND`) to follow a certain pattern.
+[0.164s] Call Stack (most recent call first):
+[0.164s]   /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake:99 (find_package_handle_standard_args)
+[0.164s]   /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:72 (include)
+[0.165s]   CMakeLists.txt:23 (find_package)
+[0.165s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.165s] [0m
+[0.192s] -- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+[0.229s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+[0.230s] -- Looking for ignition-math6 -- found version 6.15.1
+[0.236s] -- Searching for dependencies of ignition-math6
+[0.238s] -- Looking for OGRE...
+[0.245s] -- Found Ogre Ghadamon (1.9.0)
+[0.245s] -- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+[0.258s] -- Looking for OGRE_Paging...
+[0.258s] -- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+[0.258s] -- Looking for OGRE_Terrain...
+[0.259s] -- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+[0.259s] -- Looking for OGRE_Property...
+[0.259s] -- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+[0.259s] -- Looking for OGRE_RTShaderSystem...
+[0.259s] -- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+[0.259s] -- Looking for OGRE_Volume...
+[0.259s] -- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+[0.259s] -- Looking for OGRE_Overlay...
+[0.259s] -- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+[0.329s] -- Looking for ignition-math6 -- found version 6.15.1
+[0.329s] -- Looking for ignition-transport8 -- found version 8.2.1
+[0.330s] -- Searching for dependencies of ignition-transport8
+[0.341s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") 
+[0.353s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[0.360s] -- Checking for module 'libzmq >= 4'
+[0.375s] --   Found libzmq , version 4.3.4
+[0.421s] -- Checking for module 'uuid'
+[0.435s] --   Found uuid, version 2.37.2
+[0.468s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[0.468s] -- Searching for dependencies of ignition-msgs5
+[0.490s] -- Looking for ignition-math6 -- found version 6.15.1
+[0.496s] -- Checking for module 'tinyxml2'
+[0.509s] --   Found tinyxml2, version 9.0.0
+[0.543s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[0.543s] -- Looking for ignition-common3 -- found version 3.14.0
+[0.543s] -- Searching for dependencies of ignition-common3
+[0.544s] -- Looking for dlfcn.h - found
+[0.544s] -- Looking for libdl - found
+[0.557s] -- Searching for <ignition-common3> component [graphics]
+[0.558s] -- Looking for ignition-common3-graphics -- found version 3.14.0
+[0.558s] -- Searching for dependencies of ignition-common3-graphics
+[0.559s] -- Looking for ignition-math6 -- found version 6.15.1
+[0.560s] -- Looking for ignition-fuel_tools4 -- found version 4.4.0
+[0.561s] -- Searching for dependencies of ignition-fuel_tools4
+[0.604s] -- Checking for module 'jsoncpp'
+[0.619s] --   Found jsoncpp, version 1.9.5
+[0.662s] -- Checking for module 'libzip'
+[0.676s] --   Found libzip, version 1.7.3
+[0.710s] -- Looking for ignition-common3 -- found version 3.14.0
+[0.710s] -- Looking for ignition-math6 -- found version 6.15.1
+[0.711s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[0.713s] -- Found gazebo_ros_pkgs: 3.7.0 (/opt/ros/humble/share/gazebo_ros_pkgs/cmake)
+[0.713s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.734s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.736s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.740s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.745s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.751s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.771s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.779s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.793s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.794s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.871s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.895s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.904s] -- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)
+[0.906s] -- Found turtlebot3_msgs: 2.2.3 (/home/eashan/turtlebot3_ws/install/turtlebot3_msgs/share/turtlebot3_msgs/cmake)
+[0.927s] -- Found visualization_msgs: 4.2.4 (/opt/ros/humble/share/visualization_msgs/cmake)
+[0.938s] -- Found gazebo_msgs: 3.7.0 (/opt/ros/humble/share/gazebo_msgs/cmake)
+[0.957s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[1.064s] -- Configuring done
+[1.133s] -- Generating done
+[1.134s] -- Build files have been written to: /home/eashan/turtlebot3_ws/build/turtlebot3_maze
+[1.165s] [35m[1mConsolidate compiler generated dependencies of target velocity_commander[0m
+[1.166s] [35m[1mConsolidate compiler generated dependencies of target laser_scan_processor[0m
+[1.166s] [35m[1mConsolidate compiler generated dependencies of target robot_pose_processor[0m
+[1.167s] [35m[1mConsolidate compiler generated dependencies of target image_processor[0m
+[1.167s] [35m[1mConsolidate compiler generated dependencies of target obstacle_avoidance[0m
+[1.167s] [35m[1mConsolidate compiler generated dependencies of target color_detector[0m
+[1.168s] [35m[1mConsolidate compiler generated dependencies of target sensor_data_processor[0m
+[1.168s] [35m[1mConsolidate compiler generated dependencies of target odom_processor[0m
+[1.179s] [  3%] [32mBuilding CXX object CMakeFiles/sensor_data_processor.dir/src/sensor_data_processor.cpp.o[0m
+[1.180s] [  6%] [32mBuilding CXX object CMakeFiles/velocity_commander.dir/src/velocity_commander.cpp.o[0m
+[1.180s] [  9%] [32mBuilding CXX object CMakeFiles/robot_pose_processor.dir/src/robot_pose_processor.cpp.o[0m
+[1.182s] [ 12%] [32mBuilding CXX object CMakeFiles/image_processor.dir/src/image_processor.cpp.o[0m
+[1.192s] [ 18%] [32mBuilding CXX object CMakeFiles/color_detector.dir/src/color_detector.cpp.o[0m
+[1.193s] [ 18%] [32mBuilding CXX object CMakeFiles/obstacle_avoidance.dir/src/obstacle_avoidance.cpp.o[0m
+[1.193s] [ 21%] [32mBuilding CXX object CMakeFiles/odom_processor.dir/src/odom_processor.cpp.o[0m
+[1.195s] [ 25%] [32mBuilding CXX object CMakeFiles/laser_scan_processor.dir/src/laser_scan_processor.cpp.o[0m
+[1.595s] [ 28%] [32m[1mLinking CXX static library librobot_pose_processor.a[0m
+[1.601s] [ 31%] [32m[1mLinking CXX static library libsensor_data_processor.a[0m
+[1.608s] [ 34%] [32m[1mLinking CXX static library libvelocity_commander.a[0m
+[1.625s] [ 34%] Built target robot_pose_processor
+[1.631s] [ 34%] Built target sensor_data_processor
+[1.639s] [ 34%] Built target velocity_commander
+[1.647s] [ 37%] [32mBuilding CXX object CMakeFiles/robot_pose_processor_node.dir/src/robot_pose_processor.cpp.o[0m
+[1.653s] [ 40%] [32mBuilding CXX object CMakeFiles/sensor_data_processor_node.dir/src/sensor_data_processor.cpp.o[0m
+[1.659s] [ 43%] [32mBuilding CXX object CMakeFiles/velocity_commander_node.dir/src/velocity_commander.cpp.o[0m
+[1.920s] [ 46%] [32m[1mLinking CXX static library libimage_processor.a[0m
+[1.957s] [ 46%] Built target image_processor
+[1.985s] [ 50%] [32mBuilding CXX object CMakeFiles/image_processor_node.dir/src/image_processor.cpp.o[0m
+[1.989s] [ 53%] [32m[1mLinking CXX executable robot_pose_processor_node[0m
+[2.015s] [ 56%] [32m[1mLinking CXX executable velocity_commander_node[0m
+[2.162s] [ 59%] [32m[1mLinking CXX executable sensor_data_processor_node[0m
+[2.643s] [ 62%] [32m[1mLinking CXX executable image_processor_node[0m
+[2.765s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[2.765s] (.text+0x1b): undefined reference to `main'
+[2.767s] collect2: error: ld returned 1 exit status
+[2.769s] gmake[2]: *** [CMakeFiles/robot_pose_processor_node.dir/build.make:288: robot_pose_processor_node] Error 1
+[2.770s] gmake[1]: *** [CMakeFiles/Makefile2:479: CMakeFiles/robot_pose_processor_node.dir/all] Error 2
+[2.770s] gmake[1]: *** Waiting for unfinished jobs....
+[2.808s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[2.808s] (.text+0x1b): undefined reference to `main'
+[2.810s] collect2: error: ld returned 1 exit status
+[2.812s] gmake[2]: *** [CMakeFiles/sensor_data_processor_node.dir/build.make:288: sensor_data_processor_node] Error 1
+[2.812s] gmake[1]: *** [CMakeFiles/Makefile2:453: CMakeFiles/sensor_data_processor_node.dir/all] Error 2
+[2.813s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[2.813s] (.text+0x1b): undefined reference to `main'
+[2.815s] collect2: error: ld returned 1 exit status
+[2.817s] gmake[2]: *** [CMakeFiles/velocity_commander_node.dir/build.make:288: velocity_commander_node] Error 1
+[2.817s] gmake[1]: *** [CMakeFiles/Makefile2:505: CMakeFiles/velocity_commander_node.dir/all] Error 2
+[3.257s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[3.257s] (.text+0x1b): undefined reference to `main'
+[3.260s] collect2: error: ld returned 1 exit status
+[3.262s] gmake[2]: *** [CMakeFiles/image_processor_node.dir/build.make:288: image_processor_node] Error 1
+[3.263s] gmake[1]: *** [CMakeFiles/Makefile2:557: CMakeFiles/image_processor_node.dir/all] Error 2
+[7.044s] [ 65%] [32m[1mLinking CXX static library liblaser_scan_processor.a[0m
+[7.056s] [ 68%] [32m[1mLinking CXX static library libodom_processor.a[0m
+[7.162s] [ 68%] Built target laser_scan_processor
+[7.176s] [ 68%] Built target odom_processor
+[7.855s] [ 71%] [32m[1mLinking CXX static library libcolor_detector.a[0m
+[8.017s] [ 71%] Built target color_detector
+[8.494s] [ 75%] [32m[1mLinking CXX static library libobstacle_avoidance.a[0m
+[8.659s] [ 75%] Built target obstacle_avoidance
+[8.660s] gmake: *** [Makefile:146: all] Error 2
+[8.664s] Invoked command in '/home/eashan/turtlebot3_ws/build/turtlebot3_maze' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/eashan/turtlebot3_ws/install/turtlebot3_teleop:/home/eashan/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/eashan/turtlebot3_ws/build/turtlebot3_maze -- -j22 -l22

@@ -13,10 +13,12 @@ OdometryProcessor::OdometryProcessor() : Node("odometry_processor")
 
   // Subscription to the "odom" topic
   odom_sub = this->create_subscription<nav_msgs::msg::Odometry>(
-  "odom", qos, std::bind(&OdometryProcessor::OdomCallback, this, std::placeholders::_1));
+  "odom", qos, std::bind(&OdometryProcessor::OdomCallback, 
+  this, std::placeholders::_1));
   
   // Publisher for the robot's yaw angle
-  robot_pose_pub = this->create_publisher<std_msgs::msg::Float64>("robot_pose_yaw", qos);
+  robot_pose_pub = this->create_publisher<std_msgs::msg::Float64>(
+  "robot_pose_yaw", qos);
 
   RCLCPP_INFO(this->get_logger(), "Odometry processor node has been initialised");
 }
@@ -37,4 +39,16 @@ void OdometryProcessor::OdomCallback(const nav_msgs::msg::Odometry::SharedPtr ms
   auto robot_pose_msg = std_msgs::msg::Float64();
   robot_pose_msg.data = yaw;
   robot_pose_pub->publish(robot_pose_msg);
+}
+
+// ********************************************************************
+// *                          Main Function                           *
+// ********************************************************************
+int main(int argc, char ** argv)
+{
+  rclcpp::init(argc, argv);
+  rclcpp::spin(std::make_shared<OdometryProcessor>());
+  rclcpp::shutdown();
+
+  return 0;
 }

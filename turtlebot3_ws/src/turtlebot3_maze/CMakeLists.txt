@@ -34,13 +34,10 @@ find_package(rcl_interfaces REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(OpenCV REQUIRED)
 
-
 ################################################################################
 # Build
 ################################################################################
-link_directories(
-  ${GAZEBO_LIBRARY_DIRS}
-)
+link_directories(${GAZEBO_LIBRARY_DIRS})
 
 include_directories(
   include
@@ -69,18 +66,6 @@ set(dependencies
 )
 
 # Define the libraries
-set(LIB_LASER_SCAN_PROCESSOR "laser_scan_processor")
-add_library(${LIB_LASER_SCAN_PROCESSOR} src/laser_scan_processor.cpp)
-ament_target_dependencies(${LIB_LASER_SCAN_PROCESSOR} ${dependencies})
-
-set(LIB_ODOM_PROCESSOR "odom_processor")
-add_library(${LIB_ODOM_PROCESSOR} src/odom_processor.cpp)
-ament_target_dependencies(${LIB_ODOM_PROCESSOR} ${dependencies})
-
-set(LIB_OBSTACLE_AVOIDANCE "obstacle_avoidance")
-add_library(${LIB_OBSTACLE_AVOIDANCE} src/obstacle_avoidance.cpp)
-ament_target_dependencies(${LIB_OBSTACLE_AVOIDANCE} ${dependencies})
-
 set(LIB_SENSOR_DATA_PROCESSOR "sensor_data_processor")
 add_library(${LIB_SENSOR_DATA_PROCESSOR} src/sensor_data_processor.cpp)
 ament_target_dependencies(${LIB_SENSOR_DATA_PROCESSOR} ${dependencies})
@@ -93,36 +78,39 @@ set(LIB_VELOCITY_COMMANDER "velocity_commander")
 add_library(${LIB_VELOCITY_COMMANDER} src/velocity_commander.cpp)
 ament_target_dependencies(${LIB_VELOCITY_COMMANDER} ${dependencies})
 
-set(LIB_COLOR_DETECTOR "color_detector")
-add_library(${LIB_COLOR_DETECTOR} src/color_detector.cpp)
-ament_target_dependencies(${LIB_COLOR_DETECTOR} ${dependencies})
-
 set(LIB_IMAGE_PROCESSOR "image_processor")
 add_library(${LIB_IMAGE_PROCESSOR} src/image_processor.cpp)
 ament_target_dependencies(${LIB_IMAGE_PROCESSOR} ${dependencies})
 
-# Define the main executable
-set(EXEC_MAIN "main")
-add_executable(${EXEC_MAIN} src/main.cpp)
-ament_target_dependencies(${EXEC_MAIN} ${dependencies})
+# Define the executables for each node
+add_executable(laser_scan_processor_node src/laser_scan_processor.cpp)
+ament_target_dependencies(laser_scan_processor_node ${dependencies})
+target_link_libraries(laser_scan_processor_node ${LIB_SENSOR_DATA_PROCESSOR} 
+${LIB_IMAGE_PROCESSOR})
 
+add_executable(odom_processor_node src/odom_processor.cpp)
+ament_target_dependencies(odom_processor_node ${dependencies})
+target_link_libraries(odom_processor_node ${LIB_ROBOT_POSE_PROCESSOR})
 
+add_executable(obstacle_avoidance_node src/obstacle_avoidance.cpp)
+ament_target_dependencies(obstacle_avoidance_node ${dependencies})
+target_link_libraries(obstacle_avoidance_node ${LIB_SENSOR_DATA_PROCESSOR} 
+${LIB_ROBOT_POSE_PROCESSOR} ${LIB_VELOCITY_COMMANDER})
 
-# Link the libraries to the main executable
-target_link_libraries(${EXEC_MAIN} 
-  ${LIB_LASER_SCAN_PROCESSOR} 
-  ${LIB_ODOM_PROCESSOR} 
-  ${LIB_OBSTACLE_AVOIDANCE} 
+add_executable(color_detector_node src/color_detector.cpp)
+ament_target_dependencies(color_detector_node ${dependencies})
+target_link_libraries(color_detector_node ${LIB_IMAGE_PROCESSOR})
+
+# Install targets
+install(TARGETS
   ${LIB_SENSOR_DATA_PROCESSOR}
   ${LIB_ROBOT_POSE_PROCESSOR}
   ${LIB_VELOCITY_COMMANDER}
-  ${LIB_COLOR_DETECTOR}
   ${LIB_IMAGE_PROCESSOR}
-)
-
-# Install targets
-install(TARGETS ${EXEC_MAIN} ${LIB_LASER_SCAN_PROCESSOR} ${LIB_ODOM_PROCESSOR} ${LIB_OBSTACLE_AVOIDANCE}
-  ${LIB_SENSOR_DATA_PROCESSOR} ${LIB_ROBOT_POSE_PROCESSOR} ${LIB_VELOCITY_COMMANDER} ${LIB_COLOR_DETECTOR} ${LIB_IMAGE_PROCESSOR}
+  laser_scan_processor_node
+  odom_processor_node
+  obstacle_avoidance_node
+  color_detector_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

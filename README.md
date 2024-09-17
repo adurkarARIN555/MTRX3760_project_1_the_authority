@@ -12,7 +12,9 @@ This is the repository for the Project 1 of Mechatronics Systems Design at the U
 ## Introduction:
 The repository contains code to execute a maze solving simulation of Turtlebot3 Burger using ROS2 Humble. The turtlebot navigates freely avoiding obstacles in simulation environment Gazebo Classic and RViz (ROS Visualisation) by using the LiDAR sensor and camera. Using the data received from the LiDAR sensor and camera, the robot takes the next step whether to move forward or rotate to avoid the obstacle infront on the basis of the algorithm. The turtlebot strictly follows the left wall to solve the maze and stops when the camera on it detects the colour green, indicating that it has reached its final destination.
 
-![image](https://github.com/user-attachments/assets/eb2a39e0-d595-4d0d-8b1a-1fa2b161540b) Screenshot 2024-09-17 at 00 13 39
+![image](https://github.com/user-attachments/assets/eb2a39e0-d595-4d0d-8b1a-1fa2b161540b)
+
+Figure 1: Turtlebot
 
 ## Workspace Directory Structure:
 ```
@@ -34,7 +36,6 @@ The repository contains code to execute a maze solving simulation of Turtlebot3 
               │       ├── sensor_data_processor.hpp     # Header for sensor data processor
               │       └── velocity_commander.hpp        # Header for velocity commander
               └── src/                            # Source files
-                      ├── main.cpp                      # Main source file
                       ├── color_detector.cpp            # Source for color detection
                       ├── image_processor.cpp           # Source for image processor
                       ├── laser_scan_processor.cpp      # Source for laser scan processor
@@ -48,12 +49,12 @@ The repository contains code to execute a maze solving simulation of Turtlebot3 
                         ├── turtlebot3_floatingmaze.world      # Floating maze world structure file
                         ├── turtlebot3_opentrack.world         # Open track world structure file
               └── launch/
-                        ├── turtlebot3_enclosedmaze.launch.py    # Enclosed maze world structure file
-                        ├── turtlebot3_floatingmaze.launch.py    # Floating maze world structure file
-                        ├── turtlebot3_opentrack.launch.py       # Open-track maze world structure file
-                        ├── robot_state_publisher.launch.py      # Enclosed maze world structure 
-                        ├── spawn_turtlebot3.launch.py           # Enclosed maze world structure file
-                        ├── turtlebot3_launch.py                 # Floating maze world structure file
+                        ├── turtlebot3_enclosedmaze.launch.py    # Launch file for enclosed maze
+                        ├── turtlebot3_floatingmaze.launch.py    # Launch file for floating maze
+                        ├── turtlebot3_opentrack.launch.py       # Launch file for the open track
+                        ├── robot_state_publisher.launch.py      # Launch file for robot publishing nodes 
+                        ├── spawn_turtlebot3.launch.py           # Launch file for turtlebot model
+                        ├── turtlebot3_launch.py                 # Launch file for all nodes
               
                         
 ```
@@ -88,7 +89,7 @@ floatingmaze
 ### Step 4:
 Run the line below to observe the maze following simulation:
 ```
-ros2 run turtlebot3_maze main
+ros2 launch turtlebot3_maze turtlebot3_launch.py
 ```
 
 ## Code Syntax:

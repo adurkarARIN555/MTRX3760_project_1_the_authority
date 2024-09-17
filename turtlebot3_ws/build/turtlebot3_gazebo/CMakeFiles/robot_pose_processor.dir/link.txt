@@ -1,0 +1,2 @@
+/usr/bin/ar qc librobot_pose_processor.a CMakeFiles/robot_pose_processor.dir/src/robot_pose_processor.cpp.o
+/usr/bin/ranlib librobot_pose_processor.a

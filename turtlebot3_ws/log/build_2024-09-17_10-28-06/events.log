@@ -1,0 +1,154 @@
+[0.000000] (-) TimerEvent: {}
+[0.000526] (turtlebot3_maze) JobQueued: {'identifier': 'turtlebot3_maze', 'dependencies': OrderedDict()}
+[0.000576] (turtlebot3_maze) JobStarted: {'identifier': 'turtlebot3_maze'}
+[0.005658] (turtlebot3_maze) JobProgress: {'identifier': 'turtlebot3_maze', 'progress': 'cmake'}
+[0.006013] (turtlebot3_maze) Command: {'cmd': ['/usr/bin/cmake', '/home/eashan/turtlebot3_ws/src/turtlebot3_maze', '-DCMAKE_INSTALL_PREFIX=/home/eashan/turtlebot3_ws/install/turtlebot3_maze'], 'cwd': '/home/eashan/turtlebot3_ws/build/turtlebot3_maze', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_AU:en'), ('USER', 'eashan'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/eashan'), ('OLDPWD', '/home/eashan'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1336'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'eashan'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'eashan'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/eashan-XPS-13-9340:@/tmp/.ICE-unix/1308,unix/eashan-XPS-13-9340:/tmp/.ICE-unix/1308'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3a79b01d_ab0f_4b15_86d8_c888031bc43d'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.NPWCU2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.272'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/eashan/turtlebot3_ws/build/turtlebot3_maze'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.069240] (turtlebot3_maze) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099846] (-) TimerEvent: {}
+[0.129334] (turtlebot3_maze) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.137093] (turtlebot3_maze) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.200030] (-) TimerEvent: {}
+[0.213124] (turtlebot3_maze) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.221937] (turtlebot3_maze) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.222291] (turtlebot3_maze) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.222743] (turtlebot3_maze) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.226570] (turtlebot3_maze) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.300195] (-) TimerEvent: {}
+[0.303362] (turtlebot3_maze) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.312475] (turtlebot3_maze) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.312861] (turtlebot3_maze) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.313430] (turtlebot3_maze) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.315816] (turtlebot3_maze) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.400318] (-) TimerEvent: {}
+[0.462832] (turtlebot3_maze) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.500416] (-) TimerEvent: {}
+[0.535838] (turtlebot3_maze) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.536125] (turtlebot3_maze) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PkgConfig)\n'}
+[0.536236] (turtlebot3_maze) StderrLine: {'line': b'  does not match the name of the calling package (gazebo).  This can lead to\n'}
+[0.536321] (turtlebot3_maze) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.536398] (turtlebot3_maze) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.536473] (turtlebot3_maze) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.536551] (turtlebot3_maze) StderrLine: {'line': b'  /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake:99 (find_package_handle_standard_args)\n'}
+[0.536627] (turtlebot3_maze) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:72 (include)\n'}
+[0.536701] (turtlebot3_maze) StderrLine: {'line': b'  CMakeLists.txt:23 (find_package)\n'}
+[0.536775] (turtlebot3_maze) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.536848] (turtlebot3_maze) StderrLine: {'line': b'\x1b[0m\n'}
+[0.536921] (turtlebot3_maze) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") \n'}
+[0.540974] (turtlebot3_maze) StdoutLine: {'line': b"-- Checking for module 'bullet>=2.82'\n"}
+[0.554085] (turtlebot3_maze) StdoutLine: {'line': b'--   Found bullet, version 3.05\n'}
+[0.600518] (-) TimerEvent: {}
+[0.659734] (turtlebot3_maze) StdoutLine: {'line': b'-- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") \n'}
+[0.700668] (-) TimerEvent: {}
+[0.706938] (turtlebot3_maze) StdoutLine: {'line': b'-- Found assimp: /usr/include (found version "5.2.0") \n'}
+[0.728724] (turtlebot3_maze) StdoutLine: {'line': b'-- Found DART: /usr/include (Required is at least version "6.6") found components: dart \n'}
+[0.800829] (-) TimerEvent: {}
+[0.901326] (-) TimerEvent: {}
+[0.902250] (turtlebot3_maze) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time \n'}
+[0.920491] (turtlebot3_maze) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") \n'}
+[0.925129] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[0.932769] (turtlebot3_maze) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[0.934489] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for OGRE...\n'}
+[0.935062] (turtlebot3_maze) StdoutLine: {'line': b'-- OGRE_PREFIX_WATCH changed.\n'}
+[0.939749] (turtlebot3_maze) StdoutLine: {'line': b"-- Checking for module 'OGRE'\n"}
+[0.951153] (turtlebot3_maze) StdoutLine: {'line': b'--   Found OGRE, version 1.9.0\n'}
+[0.984071] (turtlebot3_maze) StdoutLine: {'line': b'-- Found Ogre Ghadamon (1.9.0)\n'}
+[0.994739] (turtlebot3_maze) StdoutLine: {'line': b'-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so\n'}
+[1.001367] (-) TimerEvent: {}
+[1.006596] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for OGRE_Paging...\n'}
+[1.009618] (turtlebot3_maze) StdoutLine: {'line': b'-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so\n'}
+[1.009691] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for OGRE_Terrain...\n'}
+[1.011948] (turtlebot3_maze) StdoutLine: {'line': b'-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so\n'}
+[1.012013] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for OGRE_Property...\n'}
+[1.014223] (turtlebot3_maze) StdoutLine: {'line': b'-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so\n'}
+[1.014289] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for OGRE_RTShaderSystem...\n'}
+[1.016320] (turtlebot3_maze) StdoutLine: {'line': b'-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so\n'}
+[1.016384] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for OGRE_Volume...\n'}
+[1.018479] (turtlebot3_maze) StdoutLine: {'line': b'-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so\n'}
+[1.018610] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for OGRE_Overlay...\n'}
+[1.020683] (turtlebot3_maze) StdoutLine: {'line': b'-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so\n'}
+[1.068034] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.069083] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-transport8 -- found version 8.2.1\n'}
+[1.069474] (turtlebot3_maze) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport8\n'}
+[1.080174] (turtlebot3_maze) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") \n'}
+[1.092048] (turtlebot3_maze) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[1.098150] (turtlebot3_maze) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[1.101513] (-) TimerEvent: {}
+[1.112717] (turtlebot3_maze) StdoutLine: {'line': b'--   Found libzmq , version 4.3.4\n'}
+[1.153031] (turtlebot3_maze) StdoutLine: {'line': b'-- Found ZeroMQ: TRUE (Required is at least version "4") \n'}
+[1.159429] (turtlebot3_maze) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[1.170861] (turtlebot3_maze) StdoutLine: {'line': b'--   Found uuid, version 2.37.2\n'}
+[1.201600] (-) TimerEvent: {}
+[1.204850] (turtlebot3_maze) StdoutLine: {'line': b'-- Found UUID: TRUE  \n'}
+[1.207064] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[1.207643] (turtlebot3_maze) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs5\n'}
+[1.228283] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.233705] (turtlebot3_maze) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[1.246731] (turtlebot3_maze) StdoutLine: {'line': b'--   Found tinyxml2, version 9.0.0\n'}
+[1.281145] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[1.283315] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[1.283963] (turtlebot3_maze) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3\n'}
+[1.284201] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[1.284959] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[1.286674] (turtlebot3_maze) StdoutLine: {'line': b'-- Found DL: TRUE  \n'}
+[1.296861] (turtlebot3_maze) StdoutLine: {'line': b'-- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") \n'}
+[1.297460] (turtlebot3_maze) StdoutLine: {'line': b'-- Searching for <ignition-common3> component [graphics]\n'}
+[1.299575] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-common3-graphics -- found version 3.14.0\n'}
+[1.300221] (turtlebot3_maze) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3-graphics\n'}
+[1.300622] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.301665] (-) TimerEvent: {}
+[1.303343] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools4 -- found version 4.4.0\n'}
+[1.303895] (turtlebot3_maze) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools4\n'}
+[1.377996] (turtlebot3_maze) StdoutLine: {'line': b'-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  \n'}
+[1.387256] (turtlebot3_maze) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[1.399982] (turtlebot3_maze) StdoutLine: {'line': b'--   Found jsoncpp, version 1.9.5\n'}
+[1.401735] (-) TimerEvent: {}
+[1.431945] (turtlebot3_maze) StdoutLine: {'line': b'-- Found JSONCPP: TRUE  \n'}
+[1.437986] (turtlebot3_maze) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[1.448907] (turtlebot3_maze) StdoutLine: {'line': b'--   Found libzip, version 1.7.3\n'}
+[1.480066] (turtlebot3_maze) StdoutLine: {'line': b'-- Found ZIP: TRUE  \n'}
+[1.480635] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[1.481180] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.481695] (turtlebot3_maze) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[1.487559] (turtlebot3_maze) StdoutLine: {'line': b'-- Found gazebo_ros_pkgs: 3.7.0 (/opt/ros/humble/share/gazebo_ros_pkgs/cmake)\n'}
+[1.489887] (turtlebot3_maze) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[1.501822] (-) TimerEvent: {}
+[1.520453] (turtlebot3_maze) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.523102] (turtlebot3_maze) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.527209] (turtlebot3_maze) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.533850] (turtlebot3_maze) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.541893] (turtlebot3_maze) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.563199] (turtlebot3_maze) StdoutLine: {'line': b'-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[1.572954] (turtlebot3_maze) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.591970] (turtlebot3_maze) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.593296] (turtlebot3_maze) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.601913] (-) TimerEvent: {}
+[1.669950] (turtlebot3_maze) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.690718] (turtlebot3_maze) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.702000] (-) TimerEvent: {}
+[1.724595] (turtlebot3_maze) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.732640] (turtlebot3_maze) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.760934] (turtlebot3_maze) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[1.770439] (turtlebot3_maze) StdoutLine: {'line': b'-- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)\n'}
+[1.779481] (turtlebot3_maze) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:30 (find_package):\n'}
+[1.779800] (turtlebot3_maze) StderrLine: {'line': b'  By not providing "Findturtlebot3_msgs.cmake" in CMAKE_MODULE_PATH this\n'}
+[1.779890] (turtlebot3_maze) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[1.779967] (turtlebot3_maze) StderrLine: {'line': b'  "turtlebot3_msgs", but CMake did not find one.\n'}
+[1.780047] (turtlebot3_maze) StderrLine: {'line': b'\n'}
+[1.780118] (turtlebot3_maze) StderrLine: {'line': b'  Could not find a package configuration file provided by "turtlebot3_msgs"\n'}
+[1.780215] (turtlebot3_maze) StderrLine: {'line': b'  with any of the following names:\n'}
+[1.780298] (turtlebot3_maze) StderrLine: {'line': b'\n'}
+[1.780369] (turtlebot3_maze) StderrLine: {'line': b'    turtlebot3_msgsConfig.cmake\n'}
+[1.780443] (turtlebot3_maze) StderrLine: {'line': b'    turtlebot3_msgs-config.cmake\n'}
+[1.780515] (turtlebot3_maze) StderrLine: {'line': b'\n'}
+[1.780588] (turtlebot3_maze) StderrLine: {'line': b'  Add the installation prefix of "turtlebot3_msgs" to CMAKE_PREFIX_PATH or\n'}
+[1.780658] (turtlebot3_maze) StderrLine: {'line': b'  set "turtlebot3_msgs_DIR" to a directory containing one of the above files.\n'}
+[1.780735] (turtlebot3_maze) StderrLine: {'line': b'  If "turtlebot3_msgs" provides a separate development package or SDK, be\n'}
+[1.780808] (turtlebot3_maze) StderrLine: {'line': b'  sure it has been installed.\n'}
+[1.780884] (turtlebot3_maze) StderrLine: {'line': b'\n'}
+[1.780972] (turtlebot3_maze) StderrLine: {'line': b'\x1b[0m\n'}
+[1.781065] (turtlebot3_maze) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.781158] (turtlebot3_maze) StdoutLine: {'line': b'See also "/home/eashan/turtlebot3_ws/build/turtlebot3_maze/CMakeFiles/CMakeOutput.log".\n'}
+[1.786838] (turtlebot3_maze) CommandEnded: {'returncode': 1}
+[1.802112] (-) TimerEvent: {}
+[1.810061] (turtlebot3_maze) JobEnded: {'identifier': 'turtlebot3_maze', 'rc': 1}
+[1.820677] (-) EventReactorShutdown: {}

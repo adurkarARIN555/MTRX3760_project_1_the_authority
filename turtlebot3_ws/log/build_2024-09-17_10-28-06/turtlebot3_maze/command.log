@@ -1,0 +1,2 @@
+Invoking command in '/home/eashan/turtlebot3_ws/build/turtlebot3_maze': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/eashan/turtlebot3_ws/src/turtlebot3_maze -DCMAKE_INSTALL_PREFIX=/home/eashan/turtlebot3_ws/install/turtlebot3_maze
+Invoked command in '/home/eashan/turtlebot3_ws/build/turtlebot3_maze' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/eashan/turtlebot3_ws/src/turtlebot3_maze -DCMAKE_INSTALL_PREFIX=/home/eashan/turtlebot3_ws/install/turtlebot3_maze

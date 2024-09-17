@@ -1,4 +1,4 @@
-# MTRX3760 Mechartonic Systems Design
+# MTRX3760 Mechatronic Systems Design
 # Project 1 - The Authority - Turtlebot3 Burger Maze Solving Simulation
 This is the repository for the Project 1 of Mechatronics Systems Design at the University of Sydney.
 ## Author Information:
@@ -57,11 +57,45 @@ The repository contains code to execute a maze solving simulation of Turtlebot3 
               
                         
 ```
-Coding Standard
-- Hungarian Notation
-- Comments: // This is a comment
-- for ()
-  {
-    This is a for loop;
-  }
+## Instructions to Run the Simulation:
+### Step 1:
+Open the terminal and enter the workspace by using the line below: 
+```
+cd turtlebot3_ws
+```
 
+### Step 2:
+Build the workspace by running the line below:
+```
+colcon build  
+```
+
+### Step 3:
+Open the Gazebo simulation by running the commands below consecutively:
+```
+. /usr/share/gazebo/setup.sh
+export TURTLEBOT3_MODEL=burger
+ros2 launch turtlebot3_maze turtlebot3_<mazename>.launch.py
+```
+
+These are the list of maze names:
+```
+enclosedmaze
+opentrack
+floatingmaze
+```
+
+### Step 4:
+Run the line below to observe the maze following simulation:
+```
+ros2 run turtlebot3_maze main
+```
+
+## Code Syntax:
+To use this project, the following syntax conventions described below are used:
+
+- Capitalised Camel case for function names and class names
+- Snake case for variable names
+- Capitalised snake case for ```const``` variables
+- Snake case for file names
+- Comments should be in the format: ```// This is a comment```

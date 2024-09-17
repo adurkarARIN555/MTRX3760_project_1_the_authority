@@ -7,7 +7,7 @@ This is the repository for the Project 1 of Mechatronics Systems Design at the U
 |Eashan Garg|520439298
 |Savith Vinuja Karunanayaka Karunanayakage|510674179
 |Arin Adurkar|520587980
-|Joel Pivetta|
+|Joel Pivetta|520447488
 
 ## Introduction:
 The repository contains code to execute a maze solving simulation of Turtlebot3 Burger using ROS2 Humble. The turtlebot navigates freely avoiding obstacles in simulation environment Gazebo Classic and RViz (ROS Visualisation) by using the LiDAR sensor and camera. Using the data received from the LiDAR sensor and camera, the robot takes the next step whether to move forward or rotate to avoid the obstacle infront on the basis of the algorithm. The turtlebot strictly follows the left wall to solve the maze and stops when the camera on it detects the colour green, indicating that it has reached its final destination.
@@ -17,9 +17,11 @@ The repository contains code to execute a maze solving simulation of Turtlebot3 
 ## Workspace Directory Structure:
 ```
 ~/turtlebot3_ws/                         # Workspace
+  └── build/
+  └── install/
+  └── log/
   └── src/                               # Source directory
-      └── turtlebot3_simulations/        # Package for simulations
-          └── turtlebot3_gazebo/         # Gazebo simulation package
+      └── turtlebot3_maze/                  # Package for maze solving simulations
               ├── CMakeLists.txt                  # CMake build configuration
               ├── package.xml                     # Package metadata
               ├── include/                        # Include directory for headers 
@@ -52,6 +54,7 @@ The repository contains code to execute a maze solving simulation of Turtlebot3 
                         ├── robot_state_publisher.launch.py      # Enclosed maze world structure 
                         ├── spawn_turtlebot3.launch.py           # Enclosed maze world structure file
                         ├── turtlebot3_launch.py                 # Floating maze world structure file
+              
                         
 ```
 Coding Standard
